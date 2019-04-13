@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityOSC;
+using System.IO;
+using UnityEngine.Networking;
 class OSCDaemon : MonoBehaviour
 {
 	public int oscPort = 9000;
 	private OSCReciever reciever;
-	public VideoPlayer videoPlayer;
 	public Image bg;
+	public Text info;
 	public Camera cam;
 
 	private string targetServerIP;
@@ -20,11 +22,66 @@ class OSCDaemon : MonoBehaviour
 	VideoPlayer curPlayer = null;
 	void Start()
 	{
+		info.enabled = false;
 		cam = GetComponent<Camera>();
 		playerCache = new Dictionary<string, VideoPlayer>();
-		videoPlayer.loopPointReached += EndReached;
 		reciever = new OSCReciever();
 		reciever.Open(oscPort);
+	}
+
+	IEnumerator DownloadFileToPath(string url, string path, System.Action cb) {
+		var interval = new WaitForSeconds(0.1f);
+		using(UnityWebRequest req = UnityWebRequest.Get(url)) {
+			req.downloadHandler =  new DownloadHandlerFile(path);
+			
+			req.SendWebRequest();
+			info.enabled = true;
+			while(!req.isDone) {
+				info.text = "Progress:" + ((int)(req.downloadProgress * 100));
+				yield return interval;
+			}
+			info.text = "";
+			info.enabled = false;
+			
+			if (req.isNetworkError || req.isHttpError)
+				Debug.LogError(req.error);
+			else {
+				Debug.Log("File successfully downloaded and saved to " + path);
+				if(cb != null)
+					cb();
+			}
+			
+		}
+	}
+
+	void PlayVideo(string url, bool isLooping) {
+		if(playerCache.ContainsKey(url)) {
+			curPlayer = playerCache[url];
+		}
+		else {
+			curPlayer = CachePlayer(url);
+		}
+
+		if(curPlayer == null || curPlayer.isPlaying) return;
+		curPlayer.isLooping = isLooping;
+		bg.enabled = false;
+		
+		if(downloadRoutine != null) {
+			StopCoroutine(downloadRoutine);
+			downloadRoutine = null;
+		}
+
+		curPlayer.Play();
+	}
+
+	Coroutine downloadRoutine;
+
+	void StopVideo() {
+		if(curPlayer != null) {
+			curPlayer.Pause();
+			curPlayer.frame = 0;
+		}
+		bg.enabled = true;
 	}
 
 	void Update () {
@@ -35,35 +92,26 @@ class OSCDaemon : MonoBehaviour
 			int count = dataList.Count;
 			if(msg.Address.Equals("/play-video")) {
 				if(count > 0) {
-					var url = dataList[0].ToString();
-					if(playerCache.ContainsKey(url)) {
-						curPlayer = playerCache[url];
+					var url = dataList[0].ToString();	
+					if(!url.Contains("http")) {
+						var fileName = Path.GetFileName(url);
+						var fullPath = Path.Combine(Application.persistentDataPath, fileName);
+						url = "file://" + fullPath;
+						if(!File.Exists(fullPath)) return;
 					}
-					else {
-						videoPlayer.url = url;
-						curPlayer = videoPlayer;
-					}
+
+					int val;
+					if(count > 1 && int.TryParse(dataList[1].ToString(), out val)) 
+						PlayVideo(url, val == 1);
+					else 
+						PlayVideo(url, false);
 				}
 				else 
 					return;
 
-				if(curPlayer.isPlaying) return;
-
-				int val;
-				if(count > 1 && int.TryParse(dataList[1].ToString(), out val)) 
-					curPlayer.isLooping =  val == 1;//1 means isLooping
-				else 
-					curPlayer.isLooping = false;
-				bg.enabled = false;
-				
-				curPlayer.Play();
 			}
 			else if(msg.Address.Equals("/stop-video")) {
-				if(curPlayer != null) {
-					curPlayer.Pause();
-					curPlayer.frame = 0;
-				}
-				bg.enabled = true;
+				StopVideo();
 			}
 			else if(msg.Address.Equals("/pause-video")) {
 				if(curPlayer != null) curPlayer.Pause();
@@ -77,8 +125,7 @@ class OSCDaemon : MonoBehaviour
 					var url = dataList[0].ToString();
 					if(playerCache.ContainsKey(url)) return;
 					else {
-						var newPlayer = CreateNewPlayer(url);
-						if(newPlayer != null) playerCache.Add(url, newPlayer);
+						CachePlayer(url);
 					}
 				}
 				else 
@@ -95,6 +142,45 @@ class OSCDaemon : MonoBehaviour
 						playerCache.Remove(url);
 						Destroy(oldPlayer);
 					}
+				}
+				else 
+					return;
+			}
+			else if(msg.Address.Equals("/download-video")) {
+				if(count > 0) {
+					var url = dataList[0].ToString();
+					var filename = Path.GetFileName(url);
+					var filePath = Path.Combine(Application.persistentDataPath, filename);
+					int val;
+					bool testPlay = true;
+					bool overwrite = true;
+					bool interruptDuringDownload = false;
+
+					if(count > 1 && int.TryParse(dataList[1].ToString(), out val)) {
+						interruptDuringDownload = val == 1;
+					}
+					
+					if(count > 2 && int.TryParse(dataList[2].ToString(), out val)) {
+						overwrite = val == 1;
+					}
+
+					if(count > 3 && int.TryParse(dataList[3].ToString(), out val)) {
+						testPlay = val == 1;
+					}
+
+					if(!overwrite && File.Exists(filePath)) return;
+					if(downloadRoutine != null) {
+						if(interruptDuringDownload)
+							StopCoroutine(downloadRoutine);
+						else 
+							return;
+					}
+					downloadRoutine = StartCoroutine(DownloadFileToPath(url, filePath, () => {
+						if(testPlay && File.Exists(filePath)) {
+							StopVideo();
+							PlayVideo("file://" + filePath, false);
+						}
+					}));
 				}
 				else 
 					return;
@@ -153,6 +239,12 @@ class OSCDaemon : MonoBehaviour
 			
 			
 		}
+	}
+
+	VideoPlayer CachePlayer(string url) {
+		var newPlayer = CreateNewPlayer(url);
+		if(newPlayer != null) playerCache.Add(url, newPlayer);
+		return newPlayer;
 	}
 
 	VideoPlayer CreateNewPlayer(string url) {

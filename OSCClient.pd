@@ -1,5 +1,4 @@
-#N canvas 182 106 949 596 10;
-#X msg 15 49 connect 192.168.3.125 9000;
+#N canvas 106 86 949 596 10;
 #X obj 30 106 udpsend;
 #X obj 72 259 packOSC;
 #X floatatom 290 81 5 0 0 0 - - -;
@@ -18,8 +17,6 @@
 #X msg 33 300 send /stop-video;
 #X msg 33 330 send /pause-video;
 #X msg 30 358 send /continue-video;
-#X msg 190 298 send /play-video http://192.168.3.108/video/ElephantsDream.mp4
-0;
 #X msg 191 343 send /play-video http://192.168.3.108/video/VID_20190402_140552_720p.mp4
 1;
 #X msg 194 438 send /cache-video http://192.168.3.108/video/VID_20190402_140552_720p.mp4
@@ -31,29 +28,38 @@
 ;
 #X msg 581 344 send /play-video http://192.168.3.108/video/VID_20190402_140552_720p.mp4
 0;
-#X connect 0 0 1 0;
-#X connect 2 0 1 0;
-#X connect 3 0 11 0;
-#X connect 4 0 9 0;
-#X connect 5 0 7 0;
+#X msg 586 402 send /play-video http://10.10.10.65/video/ElephantsDream.mp4
+1;
+#X msg 580 467 send /cache-video http://10.10.10.65/video/ElephantsDream.mp4
+;
+#X msg 15 49 connect 192.168.3.111 9000;
+#X msg 190 298 send /play-video http://192.168.3.101/video/ElephantsDream.mp4
+0;
+#X connect 1 0 0 0;
+#X connect 2 0 10 0;
+#X connect 3 0 8 0;
+#X connect 4 0 6 0;
+#X connect 4 0 11 0;
+#X connect 5 0 6 0;
 #X connect 5 0 12 0;
-#X connect 6 0 7 0;
-#X connect 6 0 13 0;
-#X connect 7 0 3 0;
+#X connect 6 0 2 0;
+#X connect 7 0 0 0;
 #X connect 8 0 1 0;
-#X connect 9 0 2 0;
-#X connect 10 0 1 0;
-#X connect 11 0 4 0;
-#X connect 12 0 4 1;
-#X connect 13 0 4 2;
-#X connect 14 0 2 0;
-#X connect 15 0 2 0;
-#X connect 16 0 2 0;
-#X connect 17 0 2 0;
-#X connect 18 0 2 0;
-#X connect 19 0 2 0;
-#X connect 20 0 2 0;
-#X connect 21 0 2 0;
-#X connect 22 0 2 0;
-#X connect 23 0 2 0;
-#X connect 24 0 2 0;
+#X connect 9 0 0 0;
+#X connect 10 0 3 0;
+#X connect 11 0 3 1;
+#X connect 12 0 3 2;
+#X connect 13 0 1 0;
+#X connect 14 0 1 0;
+#X connect 15 0 1 0;
+#X connect 16 0 1 0;
+#X connect 17 0 1 0;
+#X connect 18 0 1 0;
+#X connect 19 0 1 0;
+#X connect 20 0 1 0;
+#X connect 21 0 1 0;
+#X connect 22 0 1 0;
+#X connect 23 0 1 0;
+#X connect 24 0 1 0;
+#X connect 25 0 0 0;
+#X connect 26 0 1 0;
