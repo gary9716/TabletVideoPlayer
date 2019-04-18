@@ -6,6 +6,10 @@ using UnityEngine.UI;
 using UnityOSC;
 using System.IO;
 using UnityEngine.Networking;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+
 class OSCDaemon : MonoBehaviour
 {
 	public int oscPort = 9000;
@@ -20,6 +24,7 @@ class OSCDaemon : MonoBehaviour
 
 	public Dictionary<string, VideoPlayer> playerCache;
 	VideoPlayer curPlayer = null;
+	private string myIP;
 	void Start()
 	{
 		info.enabled = false;
@@ -27,6 +32,8 @@ class OSCDaemon : MonoBehaviour
 		playerCache = new Dictionary<string, VideoPlayer>();
 		reciever = new OSCReciever();
 		reciever.Open(oscPort);
+		myIP = GetLocalIPAddress();
+		Debug.Log("my ip is " + myIP);
 	}
 
 	IEnumerator DownloadFileToPath(string url, string path, System.Action cb) {
@@ -41,12 +48,12 @@ class OSCDaemon : MonoBehaviour
 				yield return interval;
 			}
 			info.text = "";
-			info.enabled = false;
 			
-			if (req.isNetworkError || req.isHttpError)
-				Debug.LogError(req.error);
+			if (req.isNetworkError || req.isHttpError) {
+				info.text = req.error;	
+			}
 			else {
-				Debug.Log("File successfully downloaded and saved to " + path);
+				info.enabled = false;
 				if(cb != null)
 					cb();
 			}
@@ -152,7 +159,7 @@ class OSCDaemon : MonoBehaviour
 					var filename = Path.GetFileName(url);
 					var filePath = Path.Combine(Application.persistentDataPath, filename);
 					int val;
-					bool testPlay = true;
+					bool testPlay = false;
 					bool overwrite = true;
 					bool interruptDuringDownload = false;
 
@@ -176,9 +183,17 @@ class OSCDaemon : MonoBehaviour
 							return;
 					}
 					downloadRoutine = StartCoroutine(DownloadFileToPath(url, filePath, () => {
-						if(testPlay && File.Exists(filePath)) {
+						var fileExist = File.Exists(filePath);
+						if(testPlay && fileExist) {
 							StopVideo();
 							PlayVideo("file://" + filePath, false);
+						}
+
+						if(oscClient != null) {
+							OSCMessage message = new OSCMessage("/download-done");
+							message.Append(myIP);
+							message.Append(fileExist? "succeed" : "failed"); 
+							oscClient.Send(message);
 						}
 					}));
 				}
@@ -224,7 +239,6 @@ class OSCDaemon : MonoBehaviour
 							oscClient = new OSCClient(System.Net.IPAddress.Parse(targetServerIP), port);
 							oscClient.Connect();
 						}
-						//Debug.Log(targetServerIP + ":" + port);
 					}
 					catch(System.Exception e) {
 
@@ -247,6 +261,19 @@ class OSCDaemon : MonoBehaviour
 		return newPlayer;
 	}
 
+	public static string GetLocalIPAddress()
+	{
+		var host = Dns.GetHostEntry(Dns.GetHostName());
+		foreach (var ip in host.AddressList)
+		{
+			if (ip.AddressFamily == AddressFamily.InterNetwork)
+			{
+				return ip.ToString();
+			}
+		}
+		throw new System.Exception("No network adapters with an IPv4 address in the system!");
+	}
+
 	VideoPlayer CreateNewPlayer(string url) {
 		var player = gameObject.AddComponent<VideoPlayer>();
 		player.source = VideoSource.Url;
@@ -260,6 +287,7 @@ class OSCDaemon : MonoBehaviour
 		player.prepareCompleted += (VideoPlayer curPlayer) => {
 			if(oscClient != null) {
 				OSCMessage message = new OSCMessage("/prepare-done");
+				message.Append(myIP);
 				message.Append(curPlayer.url); 
 				oscClient.Send(message);
 			}
@@ -286,7 +314,14 @@ class OSCDaemon : MonoBehaviour
 
 	void EndReached(UnityEngine.Video.VideoPlayer vp)
 	{
-		if(!vp.isLooping) ShowBG();
+		if(!vp.isLooping) {
+			ShowBG();
+			if(oscClient != null) {
+				OSCMessage message = new OSCMessage("/play-done");
+				message.Append(myIP);
+				oscClient.Send(message);
+			}
+		}
 	}
 
 	void ShowBG() {
