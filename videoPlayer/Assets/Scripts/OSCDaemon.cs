@@ -9,6 +9,7 @@ using UnityEngine.Networking;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using FunPlus.DeviceUtils;
 
 class OSCDaemon : MonoBehaviour
 {
@@ -25,25 +26,31 @@ class OSCDaemon : MonoBehaviour
 	public Dictionary<string, VideoPlayer> playerCache;
 	VideoPlayer curPlayer = null;
 	private string myIP;
+
 	void Start()
 	{
 		info.enabled = false;
 		cam = GetComponent<Camera>();
 		playerCache = new Dictionary<string, VideoPlayer>();
-		reciever = new OSCReciever();
-		reciever.Open(oscPort);
+		if(reciever == null) {
+			reciever = new OSCReciever();
+			reciever.Open(oscPort);
+		}
 		myIP = GetLocalIPAddress();
-		Debug.Log("my ip is " + myIP);
+		DeviceUtils.SetScreenBrightness(255);
 	}
 
 	IEnumerator DownloadFileToPath(string url, string path, System.Action cb) {
 		var interval = new WaitForSeconds(0.1f);
 		using(UnityWebRequest req = UnityWebRequest.Get(url)) {
+			if(req == null) {
+				info.text = "url is invalid";
+				yield break;
+			}
 			req.downloadHandler =  new DownloadHandlerFile(path);
-			
 			req.SendWebRequest();
 			info.enabled = true;
-			while(!req.isDone) {
+			while(!req.isDone && !req.isNetworkError && !req.isHttpError) {
 				info.text = "Progress:" + ((int)(req.downloadProgress * 100));
 				yield return interval;
 			}
@@ -62,6 +69,7 @@ class OSCDaemon : MonoBehaviour
 	}
 
 	void PlayVideo(string url, bool isLooping) {
+		var prePlayer = curPlayer;
 		if(playerCache.ContainsKey(url)) {
 			curPlayer = playerCache[url];
 		}
@@ -69,7 +77,12 @@ class OSCDaemon : MonoBehaviour
 			curPlayer = CachePlayer(url);
 		}
 
-		if(curPlayer == null || curPlayer.isPlaying) return;
+		if(curPlayer == null) return;
+		if(prePlayer != null && curPlayer != prePlayer && prePlayer.isPlaying) {
+			prePlayer.Pause();
+			prePlayer.frame = 0;
+		}
+
 		curPlayer.isLooping = isLooping;
 		bg.enabled = false;
 		
@@ -77,8 +90,14 @@ class OSCDaemon : MonoBehaviour
 			StopCoroutine(downloadRoutine);
 			downloadRoutine = null;
 		}
-
-		curPlayer.Play();
+		
+		if(curPlayer.isPlaying) {
+			curPlayer.Pause();
+			curPlayer.frame = 0;	
+			curPlayer.Play();
+		}
+		else
+			curPlayer.Play();
 	}
 
 	Coroutine downloadRoutine;
@@ -250,6 +269,18 @@ class OSCDaemon : MonoBehaviour
 					return;
 				}
 			}
+			else if(msg.Address.Equals("/set-brightness")) {
+				if(count > 0) {
+					int val = 0;
+					if(int.TryParse(dataList[0].ToString(),out val)) {
+						DeviceUtils.SetScreenBrightness(val);
+					}
+				}
+				else
+				{
+					return;
+				}
+			}
 			
 			
 		}
@@ -293,9 +324,20 @@ class OSCDaemon : MonoBehaviour
 			}
 		};
 		player.loopPointReached += EndReached;
-
+		player.audioOutputMode = UnityEngine.Video.VideoAudioOutputMode.None;
 		player.Prepare();
 		return player;
+	}
+
+	/// <summary>
+	/// This function is called when the object becomes enabled and active.
+	/// </summary>
+	void OnEnable()
+	{
+		if(reciever == null) {
+			reciever = new OSCReciever();
+			reciever.Open(oscPort);
+		}
 	}
 
 	/// <summary>
@@ -305,10 +347,12 @@ class OSCDaemon : MonoBehaviour
 	{
 		if(reciever != null) {
 			reciever.Close();
+			reciever = null;
 		}
 
 		if(oscClient != null) {
 			oscClient.Close();
+			oscClient = null;
 		}
 	}
 
@@ -327,4 +371,9 @@ class OSCDaemon : MonoBehaviour
 	void ShowBG() {
 		bg.enabled = true;
 	}
+
+	public void onValChanged(System.Single val) {
+		DeviceUtils.SetScreenBrightness((int)val);
+	}
+
 }

@@ -18,6 +18,29 @@ function sendDownloadVideoCmd(client, index) {
         }
     });
 }
+
+function sendBrightnessCtrl(client, val) {
+    let msg = new Message('/set-brightness');
+    msg.append(val); //val
+    client.send(msg, (err) => {
+        if (err) {
+            console.error(new Error(err));
+        }
+    });
+}
+
+function sendBGColor(client) {
+    let msg = new Message('/set-bg-color');
+    msg.append(255); //val
+    msg.append(255); //val
+    msg.append(0); //val
+    client.send(msg, (err) => {
+        if (err) {
+            console.error(new Error(err));
+        }
+    });
+}
+
 let getIP = (interfaceName) => {
     var os = require('os');
     var ifaces = os.networkInterfaces();
@@ -39,7 +62,7 @@ let getIP = (interfaceName) => {
     return targetIP;
 }
 var oscServerPort = 9000;
-var oscServerIP = getIP("en0");
+var oscServerIP = getIP("en1");
 var oscServer = new Server(oscServerPort, '0.0.0.0');
 
 oscServer.on('message', function (msg) {
@@ -62,7 +85,7 @@ oscServer.on('message', function (msg) {
                 sendDownloadVideoCmd(clients[clientIndex], clientIndex);
         }
         else
-            console.log('failed to find client');
+            console.log('failed to find client,' + deviceIP);
     }
   }
     
@@ -92,4 +115,11 @@ function DownloadListOfVideos() {
     });
 }
 
-DownloadListOfVideos();
+clients.forEach((client, index) => {
+    //sendBrightnessCtrl(client, 255);
+    sendBGColor(client);
+});
+
+//DownloadListOfVideos();
+
+
