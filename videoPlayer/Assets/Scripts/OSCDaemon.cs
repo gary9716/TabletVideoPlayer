@@ -17,7 +17,10 @@ class OSCDaemon : MonoBehaviour
 	private OSCReciever reciever;
 	public Image bg;
 	public Text info;
+	public Text indicator;
 	public Camera cam;
+
+	public VideoPlayer noCachePlayer;
 
 	private string targetServerIP;
 	private int port;
@@ -30,6 +33,7 @@ class OSCDaemon : MonoBehaviour
 	void Start()
 	{
 		info.enabled = false;
+		indicator.enabled = false;
 		cam = GetComponent<Camera>();
 		playerCache = new Dictionary<string, VideoPlayer>();
 		if(reciever == null) {
@@ -100,6 +104,24 @@ class OSCDaemon : MonoBehaviour
 			curPlayer.Play();
 	}
 
+	void PlayVideoNoCache(string url, bool isLooping) {
+		noCachePlayer.isLooping = isLooping;
+		if(noCachePlayer.url.Equals(url)) {
+			if(noCachePlayer.isPlaying) {
+				noCachePlayer.Pause();
+				noCachePlayer.frame = 0;
+			}
+			noCachePlayer.Play();
+		}
+		else {
+			noCachePlayer.Stop();
+			noCachePlayer.url = url;
+			noCachePlayer.Play();
+		}
+		curPlayer = noCachePlayer;
+		bg.enabled = false;
+	}
+
 	Coroutine downloadRoutine;
 
 	void StopVideo() {
@@ -128,9 +150,9 @@ class OSCDaemon : MonoBehaviour
 
 					int val;
 					if(count > 1 && int.TryParse(dataList[1].ToString(), out val)) 
-						PlayVideo(url, val == 1);
+						PlayVideoNoCache(url, val == 1);
 					else 
-						PlayVideo(url, false);
+						PlayVideoNoCache(url, false);
 				}
 				else 
 					return;
@@ -144,7 +166,7 @@ class OSCDaemon : MonoBehaviour
 			}
 			else if(msg.Address.Equals("/continue-video")) {
 				bg.enabled = false;
-				if(curPlayer != null) curPlayer.Play();
+				if(curPlayer != null && !curPlayer.isPlaying) curPlayer.Play();
 			}
 			else if(msg.Address.Equals("/cache-video")) {
 				if(count > 0) {
@@ -281,6 +303,18 @@ class OSCDaemon : MonoBehaviour
 					return;
 				}
 			}
+			else if(msg.Address.Equals("/set-id")) {
+				if(count > 0) {
+					indicator.enabled = !indicator.enabled;
+					if(indicator.enabled) {
+						indicator.text = dataList[0].ToString();
+					}
+				}
+				else
+				{
+					return;
+				}
+			}
 			
 			
 		}
@@ -315,6 +349,7 @@ class OSCDaemon : MonoBehaviour
 		player.aspectRatio = VideoAspectRatio.FitOutside;
 		player.targetCamera = cam;
 		player.renderMode = VideoRenderMode.CameraNearPlane;
+		/*
 		player.prepareCompleted += (VideoPlayer curPlayer) => {
 			if(oscClient != null) {
 				OSCMessage message = new OSCMessage("/prepare-done");
@@ -323,6 +358,7 @@ class OSCDaemon : MonoBehaviour
 				oscClient.Send(message);
 			}
 		};
+		*/
 		player.loopPointReached += EndReached;
 		player.audioOutputMode = UnityEngine.Video.VideoAudioOutputMode.None;
 		player.Prepare();
@@ -359,13 +395,17 @@ class OSCDaemon : MonoBehaviour
 	void EndReached(UnityEngine.Video.VideoPlayer vp)
 	{
 		if(!vp.isLooping) {
-			ShowBG();
-			if(oscClient != null) {
-				OSCMessage message = new OSCMessage("/play-done");
-				message.Append(myIP);
-				oscClient.Send(message);
-			}
+			ShowBG();	
 		}
+
+		/*
+		if(oscClient != null) {
+			OSCMessage message = new OSCMessage("/end-reach");
+			message.Append(myIP);
+			message.Append(Path.GetFileName(vp.url));
+			oscClient.Send(message);
+		}
+		*/
 	}
 
 	void ShowBG() {

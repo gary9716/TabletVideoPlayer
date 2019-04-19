@@ -1,17 +1,11 @@
 {
     "clientIPs": [
-        "192.168.4.17"
-        
+        "192.168.4.17",
+        "192.168.4.18"
     ],
     "videoList": [
-        "faceNegative1.mp4",
-        "faceNormal1.mp4",
-        "facePositive1.mp4",
-        "footPositive1.mp4",
-        "footNormal1.mp4",
-        "footNegative1.mp4",
-        "handNegative1.mp4",
-        "handNormal1.mp4",
-        "handPositive1.mp4"
+        "faceNegative1-low.mp4",
+        "faceNormal1-low.mp4",
+        "facePositive1-low.mp4"
     ]
 }

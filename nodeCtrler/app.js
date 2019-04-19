@@ -12,11 +12,16 @@ function sendDownloadVideoCmd(client, index) {
     msg.append(1); //interrupt
     msg.append(1); //overwrite
     msg.append(0); //testplay
-    client.send(msg, (err) => {
-        if (err) {
-            console.error(new Error(err));
-        }
-    });
+    return new Promise((resolve,reject) => {
+        client.send(msg, (err) => {
+            if (err) {
+                reject(err);
+            }
+            else {
+                resolve();
+            }
+        });
+    });   
 }
 
 function sendBrightnessCtrl(client, val) {
@@ -61,7 +66,7 @@ let getIP = (interfaceName) => {
 
     return targetIP;
 }
-var oscServerPort = 9000;
+var oscServerPort = 8000;
 var oscServerIP = getIP("en1");
 var oscServer = new Server(oscServerPort, '0.0.0.0');
 
@@ -109,17 +114,22 @@ clients.forEach((client) => {
 function DownloadListOfVideos() {
     numDevicesDone = 0;
     progressIndices = [];
-    clients.forEach((client, index) => {
+    let promiseList = clients.map((client, index) => {
         progressIndices.push(0);
-        sendDownloadVideoCmd(client, index);
+        return sendDownloadVideoCmd(client, index);
+    });
+    
+    Promise.all(promiseList)
+    .catch((err) => {
+        console.error(new Error(err));
     });
 }
-
+/*
 clients.forEach((client, index) => {
     //sendBrightnessCtrl(client, 255);
     sendBGColor(client);
 });
-
-//DownloadListOfVideos();
+*/
+DownloadListOfVideos();
 
 
