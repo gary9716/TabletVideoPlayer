@@ -84,6 +84,7 @@ namespace UnityOSC
         {
             lock (_queue)
             {
+                //Debug.Log(_queue.Count);
                 return 0 < _queue.Count;
             }
         }

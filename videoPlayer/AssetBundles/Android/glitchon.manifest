@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1767726447
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e2f3d96e8f7519f25ada0ba5e3571c88
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e939ccfd5c21ee7efe16d714f9832759
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Animations/GlitchOn.anim
+Dependencies: []

@@ -1,11 +1,11 @@
 {
     "clientIPs": [
-        "192.168.4.17",
-        "192.168.4.18"
+        "192.168.4.9"
     ],
-    "videoList": [
+    "fileList": [
         "faceNegative1-low.mp4",
         "faceNormal1-low.mp4",
-        "facePositive1-low.mp4"
+        "facePositive1-low.mp4",
+        "test-pattern.png"
     ]
 }
