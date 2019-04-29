@@ -32,6 +32,7 @@ function sendDownloadCmd(ip, index) {
     let msg = new Message('/download-file');
     let fileName = fileList[index];
     let url = getURL(fileName);
+    //console.log("url:" + url);
     msg.append(url);
     msg.append(1); //interrupt
     msg.append(1); //overwrite
@@ -40,13 +41,13 @@ function sendDownloadCmd(ip, index) {
         setTimeout(() => {
             let client = new Client(ip, 9000);
             client.send(msg, (err) => {
+                client.close();
                 if (err) {
                     reject(err);
                 }
                 else {
                     resolve();
                 }
-                client.close();
             });
         }, Math.floor(Math.random() * Math.floor(3)) * 1000);
         
