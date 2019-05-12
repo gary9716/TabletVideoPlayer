@@ -1,0 +1,22 @@
+	sliderVal		cmd name	effect-index	toRecord	i	param-index	val	...			
+						s	start-param-index	following-param-count	param1	param2	...	
+s1		control r ch	/set-effect-param	0	0	i	0	{dat[r,1]}				
+s2		control img alpha	/set-effect-param	1	0	i	9	{dat[r,1]}				
+s3		control video alpha	/set-effect-param	2	0	i	0	{dat[r,1]}				
+s4		control video speed	/set-effect-param	2	1	i	1	{dat[r,1]}				
+s5		broken screen	/set-effect-param	3	1	s	0	2	{dat[r,1] * 0.5}	0.7		
+s6		noisy distortion	/set-effect-param	4	1	i	0	{dat[r,1]}				
+s7		glitch 1	/set-effect-param	5	1	i	0	{dat[r,1]}				
+s8		tv noise 6	/set-effect-param	6	1	s	0	3	{dat[r,1]}	{dat[r,1]}	{dat[r,1]}	
+s9		artefact	/set-effect-param	7	1	s	0	4	{dat[r,1]}	{dat[r,1]}	{dat[r,1]}	{dat[r,1]}
+s10		flag distortion	/set-effect-param	8	1	i	0	{dat[r,1]}				
+s11		bubble distortion	/set-effect-param	9	1	s	0	3	0.5	0.5	{dat[r,1]}	
+s12		dissipation	/set-effect-param	10	1	i	0	{dat[r,1]}				
+s13		analogGlitch	/set-effect-param	11	1	s	0	4	{dat[r,1]}	{dat[r,1]}	0.01	{dat[r,1]}
+s14		digitalGlitch	/set-effect-param	12	1	i	0	{dat[r,1]}				
+s15		glitch 3	/set-effect-param	13	1	i	0	{dat[r,1]}				
+s16		new glitch 3	/set-effect-param	14	1	i	0	{dat[r,1]}				
+s17		new glitch 4	/set-effect-param	15	1	i	0	{dat[r,1]}				
+s18		vcrDistortion	/set-effect-param	16	1	i	0	{dat[r,1]}				
+s19		tvDistorted	/set-effect-param	17	1	i	0	{dat[r,1]}				
+s20		fishEye	/set-effect-param	18	1	i	0	{dat[r,1]}				

@@ -29,7 +29,4 @@ public class VideoParamCtrler : KTEffectBase {
 		return;
 	}
 
-	public override void SetEffectActive(bool enable) {
-
-	}
 }

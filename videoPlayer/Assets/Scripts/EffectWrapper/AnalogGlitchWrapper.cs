@@ -23,6 +23,7 @@ public class AnalogGlitchWrapper : KTEffectBase {
 	}
 
 	public override void SetEffectActive(bool enable) {
+		base.SetEffectActive(enable);
 		effect.enabled = enable;
 	}
 }

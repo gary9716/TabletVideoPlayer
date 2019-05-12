@@ -1,0 +1,55 @@
+Reporters											ThreeHeadsMonster							
+Device1_Cmd1	/pause-video										Device1_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
+Device2_Cmd1	/pause-video										Device2_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
+Device3_Cmd1	/pause-video										Device3_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
+Device4_Cmd1	/pause-video										Device4_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
+Device5_Cmd1	/pause-video										Device5_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
+Device6_Cmd1	/pause-video										Device6_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
+Device1_Cmd2											Device1_Cmd2	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device2_Cmd2											Device2_Cmd2	/play-video	LookDown.mp4	-1	-1	1	-1	-1
+Device3_Cmd2											Device3_Cmd2	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device4_Cmd2											Device4_Cmd2	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device5_Cmd2											Device5_Cmd2	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
+Device6_Cmd2											Device6_Cmd2	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device1_Cmd3											Device1_Cmd3	/play-video	Sad.mp4	-1	-1	1	-1	-1
+Device2_Cmd3											Device2_Cmd3	/play-video	Thinking.mp4	-1	-1	1	-1	-1
+Device3_Cmd3											Device3_Cmd3	/play-video	UnhappyAndAngry.mp4	-1	-1	1	-1	-1
+Device4_Cmd3											Device4_Cmd3	/play-video	SurprisedAndEmbarrassed.mp4	-1	-1	1	-1	-1
+Device5_Cmd3											Device5_Cmd3	/play-video	LookDown.mp4	-1	-1	1	-1	-1
+Device6_Cmd3											Device6_Cmd3	/play-video	Thinking.mp4	-1	-1	1	-1	-1
+Device1_Cmd4	/continue-video										Device1_Cmd4	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device2_Cmd4	/continue-video										Device2_Cmd4	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device3_Cmd4	/continue-video										Device3_Cmd4	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
+Device4_Cmd4	/continue-video										Device4_Cmd4	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device5_Cmd4	/continue-video										Device5_Cmd4	/play-video	Sad.mp4	-1	-1	1	-1	-1
+Device6_Cmd4	/continue-video										Device6_Cmd4	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device1_Cmd5											Device1_Cmd5	/play-video	LookDown.mp4	-1	-1	1	-1	-1
+Device2_Cmd5											Device2_Cmd5	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device3_Cmd5											Device3_Cmd5	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device4_Cmd5											Device4_Cmd5	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
+Device5_Cmd5											Device5_Cmd5	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device6_Cmd5											Device6_Cmd5	/play-video	LookDown.mp4	-1	-1	1	-1	-1
+Device1_Cmd6											Device1_Cmd6	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device2_Cmd6											Device2_Cmd6	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device3_Cmd6											Device3_Cmd6	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
+Device4_Cmd6											Device4_Cmd6	/play-video	UnhappyAndAngry.mp4	-1	-1	1	-1	-1
+Device5_Cmd6											Device5_Cmd6	/play-video	SurprisedAndEmbarrassed.mp4	-1	-1	1	-1	-1
+Device6_Cmd6											Device6_Cmd6	/play-video	LookDown.mp4	-1	-1	1	-1	-1
+Device1_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device1_Cmd7	/play-video	Thinking.mp4	-1	-1	1	-1	-1
+Device2_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device2_Cmd7	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device3_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device3_Cmd7	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device4_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device4_Cmd7	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device5_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device5_Cmd7	/play-video	LookDown.mp4	-1	-1	1	-1	-1
+Device6_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device6_Cmd7	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device1_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device1_Cmd8	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device2_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device2_Cmd8	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
+Device3_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device3_Cmd8	/play-video	UnhappyAndAngry.mp4	-1	-1	1	-1	-1
+Device4_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device4_Cmd8	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device5_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device5_Cmd8	/play-video	Laugh.mp4	-1	-1	1	-1	-1
+Device6_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device6_Cmd8	/play-video	Regret.mp4	-1	-1	1	-1	-1
+Device1_Cmd9	/disable-effect	-1									Device1_Cmd9	/disable-effect	-1					
+Device2_Cmd9	/disable-effect	-1									Device2_Cmd9	/disable-effect	-1					
+Device3_Cmd9	/disable-effect	-1									Device3_Cmd9	/disable-effect	-1					
+Device4_Cmd9	/disable-effect	-1									Device4_Cmd9	/disable-effect	-1					
+Device5_Cmd9	/disable-effect	-1									Device5_Cmd9	/disable-effect	-1					
+Device6_Cmd9	/disable-effect	-1									Device6_Cmd9	/disable-effect	-1					

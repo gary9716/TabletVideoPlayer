@@ -29,15 +29,15 @@ function getURL(fileName) {
 }
 
 function sendDownloadCmd(ip, index) {
-    let msg = new Message('/download-file');
-    let fileName = fileList[index];
-    let url = getURL(fileName);
-    //console.log("url:" + url);
-    msg.append(url);
-    msg.append(1); //interrupt
-    msg.append(1); //overwrite
-    msg.append(0); //testplay
     return new Promise((resolve,reject) => {
+        let msg = new Message('/download-file');
+        let fileName = fileList[index];
+        let url = getURL(fileName);
+        console.log("url:" + url);
+        msg.append(url);
+        msg.append(1); //interrupt
+        msg.append(1); //overwrite
+        msg.append(0); //testplay
         setTimeout(() => {
             let client = new Client(ip, 9000);
             client.send(msg, (err) => {
@@ -91,7 +91,7 @@ oscServer.on('message', function (msg) {
     if(oscAddr === '/download-done') {
         console.log(deviceIP + ':' + fileName + "," + state);
         let index = _.findIndex(fileList, (name) => {
-            return name === fileName;
+            return path.basename(name) === fileName;
         });
         let newIndex = index + 1;
         if(newIndex >= 0 && newIndex < fileList.length)
@@ -100,6 +100,7 @@ oscServer.on('message', function (msg) {
             console.log(deviceIP + ':download complete');
             
             numDevicesDone += 1;
+            console.log('numDevices done:' + numDevicesDone);
             if(numDevicesDone === clientIPs.length) process.exit(0);
             
         }

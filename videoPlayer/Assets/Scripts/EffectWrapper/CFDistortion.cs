@@ -8,16 +8,17 @@ public class CFDistortion : KTEffectBase {
 
     public override void SetEffectActive(bool enable)
     {
-		effect.enabled = enable;
+			base.SetEffectActive(enable);
+			effect.enabled = enable;
     }
 
     public override void SetParameter(int index, float val)
     {
-		switch(index) {
-			case 0:
-				effect.Distortion = val;
-				break;
-		}
+			switch(index) {
+				case 0:
+					effect.Distortion = val;
+					break;
+			}
     }
 
 }

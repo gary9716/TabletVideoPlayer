@@ -17,6 +17,7 @@ public class ImageAnimator : KTEffectBase {
 	private int attackFuncIndex;
 	private float decayDuration;
 	private int decayFuncIndex;
+	private float flashingDuration;
 
 	//effect1 
 	private float flashingInterval; //flip(minA->maxA, maxA->minA) interval
@@ -53,13 +54,21 @@ public class ImageAnimator : KTEffectBase {
 			case 7:
 				flashingInterval = (int)val;
 				break;
+			case 8:
+				flashingDuration = val;
+				break;
+			case 9:
+				var color = img.color;
+				color.a = val;
+				img.color = color;
+				break;
 		}
 		return;
 	}
 
 	public override void SetEffectActive(bool enable) {
+		base.SetEffectActive(enable);
 		isAnimating = enable;
-		StopAllCoroutines();
 		if(enable) {
 			if(img.sprite == null) return;
 			switch(activeIndex) {
@@ -99,7 +108,9 @@ public class ImageAnimator : KTEffectBase {
 		var decayFunc = decayFuncIndex < 0? stepFunc:EasingFunction.GetEasingFunction((EasingFunction.Ease)decayFuncIndex);
 		float start = 0, end = 0;
 		EasingFunction.Function easeFunc;
+		Color color;
 
+		img.enabled = true;
 		for(int i = 0;i < 2;i++) {
 			if(i == 0) {
 				easeFunc = attackFunc;
@@ -116,7 +127,7 @@ public class ImageAnimator : KTEffectBase {
 			while(timer < d) {
 				var progress = timer / d;
 				var val = easeFunc(start, end, progress);
-				var color = img.color;
+				color = img.color;
 				color.a = val;
 				img.color = color;
 
@@ -124,7 +135,8 @@ public class ImageAnimator : KTEffectBase {
 				yield return null;
 			}
 		}
-		
+
+		ResetImageAlpha();
 	}
 
 	IEnumerator ConstantFlashing() {
@@ -134,12 +146,16 @@ public class ImageAnimator : KTEffectBase {
 		color.a = maxA * state + minA * (1 - state);
 		img.color = color;
 		
-		while(true) {
+		img.enabled = true;
+		float totalTimer = 0;
+		while(totalTimer < flashingDuration) {
 			float timer = 0;
 			while(timer < flashingInterval) {
 				timer += Time.deltaTime;
 				yield return null;
 			}
+
+			totalTimer += timer;
 
 			state = 1 - state; //state flip
 		
@@ -148,6 +164,7 @@ public class ImageAnimator : KTEffectBase {
 			img.color = color;
 		}
 	
+		ResetImageAlpha();
 	}
 
 }

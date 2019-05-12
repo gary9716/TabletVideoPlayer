@@ -39,7 +39,4 @@ public class BGAnimator : KTEffectBase {
 		return;
 	}
 
-	public override void SetEffectActive(bool enable) {
-		
-	}
 }
