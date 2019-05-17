@@ -38,6 +38,11 @@ public class TypeWord : MonoBehaviour {
 		StartCoroutine(Animation());
 	}
 
+	void OnDisable()
+	{
+		StopAllCoroutines();
+	}
+
 	IEnumerator Animation() {
 		if(Mathf.Approximately(duration, 0)) yield break;
 		if(orientation == TextManager.Orientation.Horizontal) {

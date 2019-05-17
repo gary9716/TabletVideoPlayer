@@ -129,13 +129,14 @@ clientIPs.forEach((ip) => {
 
 function DownloadListOfFiles() {
     numDevicesDone = 0;
-    let promiseList = clientIPs.map((ip, index) => {
-        return sendDownloadCmd(ip, index);
+    let promiseList = clientIPs.map((ip) => {
+        return sendDownloadCmd(ip, 0);
     });
     
     Promise.all(promiseList)
     .catch((err) => {
-        console.error(new Error(err));
+        if(err)
+            console.error(new Error(err));
     });
 }
 DownloadListOfFiles();

@@ -26,4 +26,8 @@ public class AnalogGlitchWrapper : KTEffectBase {
 		base.SetEffectActive(enable);
 		effect.enabled = enable;
 	}
+
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
 }

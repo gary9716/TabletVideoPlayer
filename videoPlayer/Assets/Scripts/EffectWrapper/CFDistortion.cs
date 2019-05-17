@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CFDistortion : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public CameraFilterPack_Distortion_Noise effect;
 
     public override void SetEffectActive(bool enable)

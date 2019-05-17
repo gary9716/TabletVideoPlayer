@@ -1,55 +1,55 @@
-Reporters											ThreeHeadsMonster							
-Device1_Cmd1	/pause-video										Device1_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
-Device2_Cmd1	/pause-video										Device2_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
-Device3_Cmd1	/pause-video										Device3_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
-Device4_Cmd1	/pause-video										Device4_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
-Device5_Cmd1	/pause-video										Device5_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
-Device6_Cmd1	/pause-video										Device6_Cmd1	/play-video	VarEmoFace.mp4	-1	-1	1	-1	-1
-Device1_Cmd2											Device1_Cmd2	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device2_Cmd2											Device2_Cmd2	/play-video	LookDown.mp4	-1	-1	1	-1	-1
-Device3_Cmd2											Device3_Cmd2	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device4_Cmd2											Device4_Cmd2	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device5_Cmd2											Device5_Cmd2	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
-Device6_Cmd2											Device6_Cmd2	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device1_Cmd3											Device1_Cmd3	/play-video	Sad.mp4	-1	-1	1	-1	-1
-Device2_Cmd3											Device2_Cmd3	/play-video	Thinking.mp4	-1	-1	1	-1	-1
-Device3_Cmd3											Device3_Cmd3	/play-video	UnhappyAndAngry.mp4	-1	-1	1	-1	-1
-Device4_Cmd3											Device4_Cmd3	/play-video	SurprisedAndEmbarrassed.mp4	-1	-1	1	-1	-1
-Device5_Cmd3											Device5_Cmd3	/play-video	LookDown.mp4	-1	-1	1	-1	-1
-Device6_Cmd3											Device6_Cmd3	/play-video	Thinking.mp4	-1	-1	1	-1	-1
-Device1_Cmd4	/continue-video										Device1_Cmd4	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device2_Cmd4	/continue-video										Device2_Cmd4	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device3_Cmd4	/continue-video										Device3_Cmd4	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
-Device4_Cmd4	/continue-video										Device4_Cmd4	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device5_Cmd4	/continue-video										Device5_Cmd4	/play-video	Sad.mp4	-1	-1	1	-1	-1
-Device6_Cmd4	/continue-video										Device6_Cmd4	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device1_Cmd5											Device1_Cmd5	/play-video	LookDown.mp4	-1	-1	1	-1	-1
-Device2_Cmd5											Device2_Cmd5	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device3_Cmd5											Device3_Cmd5	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device4_Cmd5											Device4_Cmd5	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
-Device5_Cmd5											Device5_Cmd5	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device6_Cmd5											Device6_Cmd5	/play-video	LookDown.mp4	-1	-1	1	-1	-1
-Device1_Cmd6											Device1_Cmd6	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device2_Cmd6											Device2_Cmd6	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device3_Cmd6											Device3_Cmd6	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
-Device4_Cmd6											Device4_Cmd6	/play-video	UnhappyAndAngry.mp4	-1	-1	1	-1	-1
-Device5_Cmd6											Device5_Cmd6	/play-video	SurprisedAndEmbarrassed.mp4	-1	-1	1	-1	-1
-Device6_Cmd6											Device6_Cmd6	/play-video	LookDown.mp4	-1	-1	1	-1	-1
-Device1_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device1_Cmd7	/play-video	Thinking.mp4	-1	-1	1	-1	-1
-Device2_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device2_Cmd7	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device3_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device3_Cmd7	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device4_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device4_Cmd7	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device5_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device5_Cmd7	/play-video	LookDown.mp4	-1	-1	1	-1	-1
-Device6_Cmd7	/play-video	NewsAll.mp4	-1	-1	1	-1	-1				Device6_Cmd7	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device1_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device1_Cmd8	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device2_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device2_Cmd8	/play-video	FriendlyAndRelaxed.mp4	-1	-1	1	-1	-1
-Device3_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device3_Cmd8	/play-video	UnhappyAndAngry.mp4	-1	-1	1	-1	-1
-Device4_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device4_Cmd8	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device5_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device5_Cmd8	/play-video	Laugh.mp4	-1	-1	1	-1	-1
-Device6_Cmd8	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1				Device6_Cmd8	/play-video	Regret.mp4	-1	-1	1	-1	-1
-Device1_Cmd9	/disable-effect	-1									Device1_Cmd9	/disable-effect	-1					
-Device2_Cmd9	/disable-effect	-1									Device2_Cmd9	/disable-effect	-1					
-Device3_Cmd9	/disable-effect	-1									Device3_Cmd9	/disable-effect	-1					
-Device4_Cmd9	/disable-effect	-1									Device4_Cmd9	/disable-effect	-1					
-Device5_Cmd9	/disable-effect	-1									Device5_Cmd9	/disable-effect	-1					
-Device6_Cmd9	/disable-effect	-1									Device6_Cmd9	/disable-effect	-1					
+Device	News_CmdGrid_Set														News_CmdGrid_Set_End	Device	THMonster_CmdGrid_Set																					THMonster_CmdGrid_Set_End
+Device1_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						Unhappy1	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0	0.036	1	0	0.036
+Device2_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						Angry1	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.053	0.083	1	0.053	0.083
+Device3_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						Angry2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.094	0.107	1	0.094	0.107
+Device4_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						Angry3	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.115	0.118	1	0.115	0.118
+Device5_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						Sad1	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.122	0.149	1	0.122	0.149
+Device6_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						Sad2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.162	0.186	1	0.162	0.186
+Device1_Cmd2																Friendly	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.261	0.295	1	0.261	0.295
+Device2_Cmd2																Thinking	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.34	0.353	1	0.34	0.353
+Device3_Cmd2																Thinking2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.37	0.399	1	0.37	0.399
+Device4_Cmd2																Relax	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.426	0.453	1	0.426	0.453
+Device5_Cmd2																Friendly2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.554	0.579	1	0.554	0.579
+Device6_Cmd2																Laugh	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.591	0.613	1	0.591	0.613
+Device1_Cmd3																Laugh2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.631	0.636	1	0.631	0.636
+Device2_Cmd3																Laugh3	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.642	0.658	1	0.642	0.658
+Device3_Cmd3																Surprised	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.715	0.729	1	0.715	0.729
+Device4_Cmd3																Embarrassed	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.812	0.845	1	0.812	0.845
+Device5_Cmd3																Regret	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.865	0.914	1	0.865	0.914
+Device6_Cmd3																LookDown	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.942	0.975	1	0.942	0.975
+Device1_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										Unhappy1	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0	0.036	1	0	0.036
+Device2_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										Angry1	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.053	0.083	1	0.053	0.083
+Device3_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										Angry2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.094	0.107	1	0.094	0.107
+Device4_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										Angry3	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.115	0.118	1	0.115	0.118
+Device5_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										Sad1	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.122	0.149	1	0.122	0.149
+Device6_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										Sad2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.162	0.186	1	0.162	0.186
+Device1_Cmd5																Friendly	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.261	0.295	1	0.261	0.295
+Device2_Cmd5																Thinking	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.34	0.353	1	0.34	0.353
+Device3_Cmd5																Thinking2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.37	0.399	1	0.37	0.399
+Device4_Cmd5																Relax	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.426	0.453	1	0.426	0.453
+Device5_Cmd5																Friendly2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.554	0.579	1	0.554	0.579
+Device6_Cmd5																Laugh	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.591	0.613	1	0.591	0.613
+Device1_Cmd6																Laugh2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.631	0.636	1	0.631	0.636
+Device2_Cmd6																Laugh3	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.642	0.658	1	0.642	0.658
+Device3_Cmd6																Surprised	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.715	0.729	1	0.715	0.729
+Device4_Cmd6																Embarrassed	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.812	0.845	1	0.812	0.845
+Device5_Cmd6																Regret	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.865	0.914	1	0.865	0.914
+Device6_Cmd6																LookDown	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.942	0.975	1	0.942	0.975
+Device1_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	-1	-1	1	-1	-1					Unhappy1	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0	0.036	1	0	0.036
+Device2_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.2	-1	1	0.2	-1					Angry1	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.053	0.083	1	0.053	0.083
+Device3_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.5	-1	1	0.5	-1					Angry2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.094	0.107	1	0.094	0.107
+Device4_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.8	-1	1	0.8	-1					Angry3	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.115	0.118	1	0.115	0.118
+Device5_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.4	-1	1	0.4	-1					Sad1	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.122	0.149	1	0.122	0.149
+Device6_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.6	-1	1	0.6	-1					Sad2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.162	0.186	1	0.162	0.186
+Device1_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					Friendly	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.261	0.295	1	0.261	0.295
+Device2_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					Thinking	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.34	0.353	1	0.34	0.353
+Device3_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					Thinking2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.37	0.399	1	0.37	0.399
+Device4_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					Relax	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.426	0.453	1	0.426	0.453
+Device5_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					Friendly2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.554	0.579	1	0.554	0.579
+Device6_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					Laugh	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.591	0.613	1	0.591	0.613
+Device1_Cmd9	/disable-effect	-1														Device1_Cmd9	/disable-effect	-1																				
+Device2_Cmd9	/disable-effect	-1														Device2_Cmd9	/disable-effect	-1																				
+Device3_Cmd9	/disable-effect	-1														Device3_Cmd9	/disable-effect	-1																				
+Device4_Cmd9	/disable-effect	-1														Device4_Cmd9	/disable-effect	-1																				
+Device5_Cmd9	/disable-effect	-1														Device5_Cmd9	/disable-effect	-1																				
+Device6_Cmd9	/disable-effect	-1														Device6_Cmd9	/disable-effect	-1																				

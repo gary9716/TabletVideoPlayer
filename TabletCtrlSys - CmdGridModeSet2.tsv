@@ -1,55 +1,55 @@
-Cage													Feed							
-Device1_Cmd1	/show-text	超機車的	0	22	0.5	0.5	0	-1	0				Device1_Cmd1	/play-video	dancer1-masked-low.mp4	-1	-1	1	-1	-1
-Device2_Cmd1	/show-text	去死！！	1	24	0.5	0.5	2	0.1	5				Device2_Cmd1	/play-video	dancer2-masked-low.mp4	-1	-1	1	-1	-1
-Device3_Cmd1	/show-text	要你付出代價	0	22	0.5	0.5	1	2.5	3				Device3_Cmd1	/play-video	dancer3-masked-low.mp4	-1	-1	1	-1	-1
-Device4_Cmd1	/show-text	幹！	1	26	0.5	0.5	0	0	1	3	3		Device4_Cmd1	/play-video	dancer4-masked-low.mp4	-1	-1	1	-1	-1
-Device5_Cmd1	/show-text	搞屁啊	0	28	0.5	0.5	1	2.5	3				Device5_Cmd1	/play-video	dancer5-masked-low.mp4	-1	-1	1	-1	-1
-Device6_Cmd1													Device6_Cmd1	/play-video	dancer1-masked-low.mp4	-1	-1	1	-1	-1
-Device1_Cmd2													Device1_Cmd2							
-Device2_Cmd2													Device2_Cmd2							
-Device3_Cmd2													Device3_Cmd2							
-Device4_Cmd2													Device4_Cmd2							
-Device5_Cmd2													Device5_Cmd2							
-Device6_Cmd2													Device6_Cmd2							
-Device1_Cmd3													Device1_Cmd3							
-Device2_Cmd3													Device2_Cmd3							
-Device3_Cmd3													Device3_Cmd3							
-Device4_Cmd3													Device4_Cmd3							
-Device5_Cmd3													Device5_Cmd3							
-Device6_Cmd3													Device6_Cmd3							
-Device1_Cmd4													Device1_Cmd4							
-Device2_Cmd4													Device2_Cmd4							
-Device3_Cmd4													Device3_Cmd4							
-Device4_Cmd4													Device4_Cmd4							
-Device5_Cmd4													Device5_Cmd4							
-Device6_Cmd4													Device6_Cmd4							
-Device1_Cmd5													Device1_Cmd5							
-Device2_Cmd5													Device2_Cmd5							
-Device3_Cmd5													Device3_Cmd5							
-Device4_Cmd5													Device4_Cmd5							
-Device5_Cmd5													Device5_Cmd5							
-Device6_Cmd5													Device6_Cmd5							
-Device1_Cmd6													Device1_Cmd6							
-Device2_Cmd6													Device2_Cmd6							
-Device3_Cmd6													Device3_Cmd6							
-Device4_Cmd6													Device4_Cmd6							
-Device5_Cmd6													Device5_Cmd6							
-Device6_Cmd6													Device6_Cmd6							
-Device1_Cmd7													Device1_Cmd7							
-Device2_Cmd7													Device2_Cmd7							
-Device3_Cmd7													Device3_Cmd7							
-Device4_Cmd7													Device4_Cmd7							
-Device5_Cmd7													Device5_Cmd7							
-Device6_Cmd7													Device6_Cmd7							
-Device1_Cmd8													Device1_Cmd8							
-Device2_Cmd8													Device2_Cmd8							
-Device3_Cmd8													Device3_Cmd8							
-Device4_Cmd8													Device4_Cmd8							
-Device5_Cmd8													Device5_Cmd8							
-Device6_Cmd8													Device6_Cmd8							
-Device1_Cmd9	/disable-effect	-1											Device1_Cmd9	/disable-effect	-1					
-Device2_Cmd9	/disable-effect	-1											Device2_Cmd9	/disable-effect	-1					
-Device3_Cmd9	/disable-effect	-1											Device3_Cmd9	/disable-effect	-1					
-Device4_Cmd9	/disable-effect	-1											Device4_Cmd9	/disable-effect	-1					
-Device5_Cmd9	/disable-effect	-1											Device5_Cmd9	/disable-effect	-1					
-Device6_Cmd9	/disable-effect	-1											Device6_Cmd9	/disable-effect	-1					
+Device	Insane_CmdGrid_Set											Insane_CmdGrid_Set_End	Device	Feed_CmdGrid_Set							Feed_CmdGrid_Set_End			
+Device1_Cmd1	/show-text												Device1_Cmd1	/play-video	dancer1-masked-low.mp4	-1	-1	1	-1	-1				
+Device2_Cmd1	/show-text												Device2_Cmd1	/play-video	dancer2-masked-low.mp4	-1	-1	1	-1	-1				
+Device3_Cmd1	/show-text												Device3_Cmd1	/play-video	dancer3-masked-low.mp4	-1	-1	1	-1	-1				
+Device4_Cmd1	/show-text												Device4_Cmd1	/play-video	dancer4-masked-low.mp4	-1	-1	1	-1	-1				
+Device5_Cmd1	/show-text												Device5_Cmd1	/play-video	dancer5-masked-low.mp4	-1	-1	1	-1	-1				
+Device6_Cmd1	/show-text												Device6_Cmd1	/play-video	dancer1-masked-low.mp4	-1	-1	1	-1	-1				
+Device1_Cmd2	/show-text												Device1_Cmd2											
+Device2_Cmd2	/show-text												Device2_Cmd2											
+Device3_Cmd2	/show-text												Device3_Cmd2											
+Device4_Cmd2	/show-text												Device4_Cmd2											
+Device5_Cmd2	/show-text												Device5_Cmd2											
+Device6_Cmd2	/show-text												Device6_Cmd2											
+Device1_Cmd3	/show-text												Device1_Cmd3											
+Device2_Cmd3	/show-text												Device2_Cmd3											
+Device3_Cmd3	/show-text												Device3_Cmd3											
+Device4_Cmd3	/show-text												Device4_Cmd3											
+Device5_Cmd3	/show-text												Device5_Cmd3											
+Device6_Cmd3	/show-text												Device6_Cmd3											
+Device1_Cmd4	/show-text												Device1_Cmd4											
+Device2_Cmd4	/show-text												Device2_Cmd4											
+Device3_Cmd4	/show-text												Device3_Cmd4											
+Device4_Cmd4	/show-text												Device4_Cmd4											
+Device5_Cmd4	/show-text												Device5_Cmd4											
+Device6_Cmd4	/show-text												Device6_Cmd4											
+Device1_Cmd5	/show-text												Device1_Cmd5											
+Device2_Cmd5	/show-text												Device2_Cmd5											
+Device3_Cmd5	/show-text												Device3_Cmd5											
+Device4_Cmd5	/show-text												Device4_Cmd5											
+Device5_Cmd5	/show-text												Device5_Cmd5											
+Device6_Cmd5	/show-text												Device6_Cmd5											
+Device1_Cmd6	/show-text												Device1_Cmd6											
+Device2_Cmd6	/show-text												Device2_Cmd6											
+Device3_Cmd6	/show-text												Device3_Cmd6											
+Device4_Cmd6	/show-text												Device4_Cmd6											
+Device5_Cmd6	/show-text												Device5_Cmd6											
+Device6_Cmd6	/show-text												Device6_Cmd6											
+Device1_Cmd7	/show-text												Device1_Cmd7											
+Device2_Cmd7	/show-text												Device2_Cmd7											
+Device3_Cmd7	/show-text												Device3_Cmd7											
+Device4_Cmd7	/show-text												Device4_Cmd7											
+Device5_Cmd7	/show-text												Device5_Cmd7											
+Device6_Cmd7	/show-text												Device6_Cmd7											
+Device1_Cmd8	/close-all												Device1_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+Device2_Cmd8	/close-all												Device2_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+Device3_Cmd8	/close-all												Device3_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+Device4_Cmd8	/close-all												Device4_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+Device5_Cmd8	/close-all												Device5_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+Device6_Cmd8	/close-all												Device6_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+Device1_Cmd9	/disable-effect	-1											Device1_Cmd9	/disable-effect	-1									
+Device2_Cmd9	/disable-effect	-1											Device2_Cmd9	/disable-effect	-1									
+Device3_Cmd9	/disable-effect	-1											Device3_Cmd9	/disable-effect	-1									
+Device4_Cmd9	/disable-effect	-1											Device4_Cmd9	/disable-effect	-1									
+Device5_Cmd9	/disable-effect	-1											Device5_Cmd9	/disable-effect	-1									
+Device6_Cmd9	/disable-effect	-1											Device6_Cmd9	/disable-effect	-1									

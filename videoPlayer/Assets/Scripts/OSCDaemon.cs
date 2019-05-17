@@ -27,6 +27,7 @@ public class OSCDaemon : MonoBehaviour
 	public Image stillImage;
 	public KTEffectBase[] effectList;
 	public Canvas txtCanvas;
+	public Canvas bgCanvas;
 
 	public TextManager txtManager;
 
@@ -80,7 +81,6 @@ public class OSCDaemon : MonoBehaviour
 		videoTex = new RenderTexture(1280, 720, 0, RenderTextureFormat.ARGB32);
 		
 		noCachePlayer.loopPointReached += EndReached;
-		noCachePlayer.started += OnVideoStarted;
 		noCachePlayer.audioOutputMode = UnityEngine.Video.VideoAudioOutputMode.None;
 
 		cam = GetComponent<Camera>();
@@ -105,14 +105,9 @@ public class OSCDaemon : MonoBehaviour
 		#endif
 
 		info.fontSize = size;
-		float timer = 0;
 		info.enabled = true;
 		info.text = msg;
-		while(timer < duration) {
-			yield return null;
-			timer += Time.deltaTime;
-		}
-
+		yield return new WaitForSeconds(duration);
 		info.enabled = false;
 	}
 
@@ -171,7 +166,6 @@ public class OSCDaemon : MonoBehaviour
 		var newPlayer = LeanPool.Spawn<VideoPlayer>(playerPrefab);
 		newPlayer.url = url;
 		newPlayer.loopPointReached += EndReached;
-		newPlayer.started += OnVideoStarted;
 		newPlayer.audioOutputMode = UnityEngine.Video.VideoAudioOutputMode.None;
 		newPlayer.name = Path.GetFileNameWithoutExtension(url);
 		newPlayer.transform.parent = playerRoot;
@@ -231,14 +225,20 @@ public class OSCDaemon : MonoBehaviour
 
 	void StopVideo() {
 		if(curPlayer != null) {
-			curPlayer.Pause();
-			curPlayer.frame = 0;
+			curPlayer.Stop();
 		}
 		videoImage.enabled = false;
+		if(videoImage.texture != null) {
+			RenderTexture rt = UnityEngine.RenderTexture.active;
+			UnityEngine.RenderTexture.active = (RenderTexture)videoImage.texture;
+			GL.Clear(true, true, Color.clear);
+			UnityEngine.RenderTexture.active = rt;
+		}
 	}
 
 	void CloseAll() {
-		txtCanvas.enabled = false;
+		DisableAllEffect();
+		txtManager.DespawnAll();
 		stillImage.enabled = false;
 		info.enabled = false;
 		StopVideo();
@@ -284,9 +284,13 @@ public class OSCDaemon : MonoBehaviour
 		return Path.Combine(Application.persistentDataPath, fileName);
 	}
 
+	public void SetLoopStartPos(float pos) {
+		if(pos > 0 && pos > loopingStopPos) loopingStartPos = loopingStopPos - 0.01f;
+		if(pos > 1) loopingStartPos = 1;
+	}
+
 	void ExecuteOSCCmd(string address, List<System.Object> dataList) {
 		int count = dataList.Count;
-
 		if(address.Equals("/play-video")) {
 			if(count > 0) {
 				ResetVideoRelatedParams();
@@ -294,6 +298,7 @@ public class OSCDaemon : MonoBehaviour
 				if(!url.Contains("http")) {
 					if(url.Equals("-1")) {
 						StopVideo();
+						DoNextCmd();
 						return;
 					}
 					var fileName = Path.GetFileName(url);
@@ -324,19 +329,22 @@ public class OSCDaemon : MonoBehaviour
 				
 				PlayVideo(url, isLooping, false);
 			}
-			else 
-				return;
+			else {
+				DoNextCmd();
+			}
 
 		}
 		else if(address.Equals("/stop-video")) {
 			StopVideo();
+			DoNextCmd();
 		}
 		else if(address.Equals("/pause-video")) {
 			if(curPlayer != null) curPlayer.Pause();
+			DoNextCmd();
 		}
 		else if(address.Equals("/continue-video")) {
-			ResetVideoRelatedParams();
 			if(curPlayer != null && !curPlayer.isPlaying) {
+				ResetVideoRelatedParams();
 				if(count > 0) {
 					float.TryParse(dataList[0].ToString(), out firstPlayStopPos);
 					if(firstPlayStopPos > 0) stopFrame = (long)(curPlayer.frameCount * firstPlayStopPos);
@@ -349,6 +357,8 @@ public class OSCDaemon : MonoBehaviour
 					float.TryParse(dataList[2].ToString(), out loopingStopPos);
 				curPlayer.Play();
 			}
+			else 
+				DoNextCmd();
 		}
 		else if(address.Equals("/load-video")) {
 			if(count > 0) {
@@ -369,7 +379,8 @@ public class OSCDaemon : MonoBehaviour
 
 				LoadVideo(url, true, false, OnVideoLoaded);
 			}
-			else return;
+			else 
+				DoNextCmd();
 		}
 		else if(address.Equals("/download-file")) {
 			if(count > 0) {
@@ -418,10 +429,12 @@ public class OSCDaemon : MonoBehaviour
 						message.Append(fileExist? "succeed" : "failed"); 
 						oscClient.Send(message);
 					}
+
+					DoNextCmd();
 				}));
 			}
 			else 
-				return;
+				DoNextCmd();
 		}
 		else if(address.Equals("/set-server")) {
 			if(count > 1) {
@@ -438,15 +451,24 @@ public class OSCDaemon : MonoBehaviour
 					oscMsg.Append("connected");
 					oscClient.Send(oscMsg);
 				}
+				DoNextCmd();
 			}
 			else
 			{
-				return;
+				DoNextCmd();
 			}
 		}
 		else if(address.Equals("/set-id")) {
 			if(count > 0) {
-				info.enabled = !info.enabled;
+				if(count > 1) {
+					int val = 1;
+					if(int.TryParse(dataList[1].ToString(), out val)) {
+						info.enabled = val == 1;
+					}
+				}
+				else
+					info.enabled = !info.enabled;
+
 				if(info.enabled) {
 					info.fontSize = 90;
 					int index = -1;
@@ -459,10 +481,11 @@ public class OSCDaemon : MonoBehaviour
 						info.text = dataList[0].ToString();
 					}
 				}
+				DoNextCmd();
 			}
 			else
 			{
-				return;
+				DoNextCmd();
 			}
 		}
 		else if(address.Equals("/set-effect-param")) {
@@ -538,15 +561,16 @@ public class OSCDaemon : MonoBehaviour
 					else {
 						StartCoroutine(ShowInfoForFixedDuration("effectIndex out of bound", 3, 25));
 					}
+					DoNextCmd();
 				}
 			}
 			else
 			{
-				return;
+				DoNextCmd();
 			}
 		}
 		else if(address.Equals("/trigger-effect")) {
-			if(count > 0 && patternSet != null) {
+			if(count > 0) {
 				int effectIndex = -1;
 				if(int.TryParse(dataList[0].ToString(), out effectIndex)) {
 					if(effectIndex >= 0 && effectIndex < effectList.Length) {
@@ -579,10 +603,11 @@ public class OSCDaemon : MonoBehaviour
 							}
 						}
 
-						effect.TriggerEffect();
+						effect.TriggerEffect(DoNextCmd);
 					}
 					else {
 						StartCoroutine(ShowInfoForFixedDuration("effectIndex out of bound", 3, 25));
+						DoNextCmd();
 					}
 				}
 			}
@@ -613,9 +638,15 @@ public class OSCDaemon : MonoBehaviour
 				}
 				
 			}
+			DoNextCmd();
+		}
+		else if(address.Equals("/stop-recording")) {
+			StopRecording();
+			DoNextCmd();
 		}
 		else if(address.Equals("/clear-recording")) {
 			paramRecording.Reset();
+			DoNextCmd();
 		}
 		else if(address.Equals("/set-image")) {
 			if(count > 0) {
@@ -642,10 +673,14 @@ public class OSCDaemon : MonoBehaviour
 						color.a = alpha;
 						stillImage.color = color;
 						stillImage.enabled = true;
+						bgCanvas.enabled = true;
 					}
 				}
+
+				DoNextCmd();
 			}
-			else return;
+			else 
+				DoNextCmd();
 		}
 		else if(address.Equals("/load-image")) {
 			if(count > 0) {
@@ -657,8 +692,11 @@ public class OSCDaemon : MonoBehaviour
 				else {
 					imgCache.Add(imgName, img);
 				}
+
+				DoNextCmd();
 			}
-			else return;
+			else
+				DoNextCmd();
 		}
 		else if(address.Equals("/disable-effect")) {
 			if(count > 0) {
@@ -676,9 +714,11 @@ public class OSCDaemon : MonoBehaviour
 				}
 			}
 			paramRecording.Reset();
+			DoNextCmd();
 		}
 		else if(address.Equals("/close-all")) {
 			CloseAll();
+			DoNextCmd();
 		}
 		else if(address.Equals("/show-text")) {
 			if(count > 5) {
@@ -725,6 +765,7 @@ public class OSCDaemon : MonoBehaviour
 				txtManager.ShowText();
 			}
 
+			DoNextCmd();
 		}
 		else if(address.Equals("/set-brightness")) {
 			if(count > 0) {
@@ -733,10 +774,8 @@ public class OSCDaemon : MonoBehaviour
 					DeviceUtils.SetScreenBrightness(val);
 				}
 			}
-			else
-			{
-				return;
-			}
+
+			DoNextCmd();
 		}
 		else if(address.Equals("/set-bg-color")) {
 			if(count > 0) {
@@ -760,9 +799,10 @@ public class OSCDaemon : MonoBehaviour
 					i++;
 				}
 				bg.color = color;
+				DoNextCmd();
 			}
 			else 
-				return;
+				DoNextCmd();
 		}			
 		else if(address.Equals("/set-video-alpha")) {
 			if(count > 0) {
@@ -772,8 +812,11 @@ public class OSCDaemon : MonoBehaviour
 					color.a = alpha;
 					videoImage.color = color;
 				}
+				
+				DoNextCmd();
 			}
-			else return;
+			else 
+				DoNextCmd();
 		}
 		else if(address.Equals("/set-video-speed")) {
 			if(count > 0) {
@@ -781,14 +824,19 @@ public class OSCDaemon : MonoBehaviour
 				if(float.TryParse(dataList[0].ToString(), out factor)) {
 					SetVideoSpeed(factor);
 				}
+				
+				DoNextCmd();
 			}
 		}
 		else if(address.Equals("/set-start-pos")) {
 			if(count > 0) {
-				float.TryParse(dataList[0].ToString(), out loopingStartPos);
-				if(loopingStartPos > 1) loopingStartPos = 1;
+				float val = -1;
+				float.TryParse(dataList[0].ToString(), out val);
+				SetLoopStartPos(val);
+				DoNextCmd();
 			}
-			else return;
+			else 
+				DoNextCmd();
 		}
 		else if(address.Equals("/get-battery-level")) {
 			if(oscClient != null) {
@@ -798,6 +846,8 @@ public class OSCDaemon : MonoBehaviour
 					oscClient.Send(message);
 				}
 			}
+
+			DoNextCmd();
 		}
 		else if(address.Equals("/set-text-effect-sentences-file")) {
 			if(count > 0) {
@@ -810,10 +860,47 @@ public class OSCDaemon : MonoBehaviour
 					PlayerPrefs.SetString(TextManager.sentenceInputPathKey, path);
 					txtManager.ProcessInputData(File.ReadAllText(path));
 				}
+				
+				DoNextCmd();
+			}
+			else 
+				DoNextCmd();
+		}
+		else if(address.Equals("/reset-receiver")) {
+			Debug.Log("reset receiver");
+			reciever.Close();
+			reciever = new OSCReciever();
+			reciever.Open(oscPort);
+			
+			DoNextCmd();
+		}
+		//unused cmds
+		else if(address.Equals("/set-canvas")) {
+			if(count > 0) {
+				int val = 1;
+				if(int.TryParse(dataList[0].ToString(), out val)) {
+					if(count > 1) {
+						if(dataList[1].ToString().Equals("txt")) {
+							txtCanvas.enabled = val == 1;
+						}
+						else {
+							bgCanvas.enabled = val == 1;
+						}
+					}
+					else
+						bgCanvas.enabled = val == 1;
+				}
 			}
 			else return;
 		}
-		//unused cmds
+		else if(address.Equals("/set-camera")) {
+			if(count > 0 && cam != null) {
+				int val = 0;
+				if(int.TryParse(dataList[0].ToString(), out val)) {
+					cam.clearFlags = (CameraClearFlags)val;
+				}
+			}
+		}
 		else if(address.Equals("/cache-video")) {
 			if(count > 0) {
 				var url = dataList[0].ToString();
@@ -830,7 +917,7 @@ public class OSCDaemon : MonoBehaviour
 		}		
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		if(reciever.hasWaitingMessages()) {
 			OSCMessage msg = reciever.getNextMessage();
 			var dataList = msg.Data;
@@ -874,13 +961,10 @@ public class OSCDaemon : MonoBehaviour
 		if(isPlayingRecord) {
 			var curFrame = curPlayer.frame;
 			var seq = paramRecording.seq;
-			for(int i = paramRecording.progress; i < seq.Count;i++) {
-				var param = seq[i];
-				if(param.videoFrame > curFrame) {
-					paramRecording.progress = i;
-					break;
-				}
-				else if(param.videoFrame == curFrame) {
+			var iter = seq.GetEnumerator();
+			while(iter.MoveNext()) {
+				var param = iter.Current;
+				if(param.videoFrame == curFrame) {
 					//apply param
 					int effectIndex = param.effectIndex;
 					var effect = effectList[effectIndex];
@@ -963,14 +1047,14 @@ public class OSCDaemon : MonoBehaviour
 	}
 
 	void DoNextCmd() {
-		if(cmdProgress < cmdList.Count) {
+		if(cmdList.Count > 0 && cmdProgress < cmdList.Count) {
 			var cmd = cmdList[cmdProgress];
-			ExecuteOSCCmd(cmd.name, cmd.parameters);
 			cmdProgress++;
+			ExecuteOSCCmd(cmd.name, cmd.parameters);
 		}
 		else {
 			if(cmdListMode == CmdListMode.Loop)
-				cmdProgress = 0;
+				cmdProgress = 0;	
 		}
 	}
 
@@ -1002,16 +1086,6 @@ public class OSCDaemon : MonoBehaviour
 			oscClient.Send(message);
 		}
 
-		//set parameter recorder
-		switch(paramRecording.state) {
-			case EffectParamsRecording.State.Recording:
-				StopRecording();
-				break;
-			case EffectParamsRecording.State.Playing:
-				paramRecording.progress = 0;
-				break;
-		}
-
 	}
 
 	void ResetVideoRelatedParams() {
@@ -1022,15 +1096,6 @@ public class OSCDaemon : MonoBehaviour
 		stopFrame = -1;
 	}
 
-	void OnVideoStarted(UnityEngine.Video.VideoPlayer vp) {
-		if(oscClient != null) {
-			OSCMessage message = new OSCMessage("/video-start");
-			message.Append(myIP);
-			message.Append(Path.GetFileName(vp.url));
-			oscClient.Send(message);
-		}
-	}
-
 	void OnVideoLoaded(UnityEngine.Video.VideoPlayer vp) {
 		if(oscClient != null) {
 			OSCMessage message = new OSCMessage("/video-loaded");
@@ -1038,6 +1103,7 @@ public class OSCDaemon : MonoBehaviour
 			message.Append(Path.GetFileName(vp.url));
 			oscClient.Send(message);
 		}
+		DoNextCmd();
 	}
 
 	void OnVideoPrepared(UnityEngine.Video.VideoPlayer vp) {

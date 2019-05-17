@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class CFTVNoise1 : KTEffectBase {
 
-	public CameraFilterPack_Noise_TV_2 effect;
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
+	public CameraFilterPack_Noise_TV effect;
 
     public override void SetEffectActive(bool enable)
     {
@@ -17,12 +21,6 @@ public class CFTVNoise1 : KTEffectBase {
 			switch(index) {
 				case 0:
 					effect.Fade = val;
-					break;
-				case 1:
-					effect.Fade_Additive = val;
-					break;
-				case 2:
-					effect.Fade_Distortion = val;
 					break;
 			}
     }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CFFishEye : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public CameraFilterPack_Distortion_FishEye effect;
 
 	public override void SetEffectActive(bool enable)

@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.76862746, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.8301887, g: 0.18405126, b: 0.18405126, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -75,9 +75,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 087413f2bf4da487083413de6740ad70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 4
+  duration: 2.5
   typeInterval: 0.15
   orientation: 0
+  txtManager: {fileID: 0}
+  substitutes: []
 --- !u!114 &114758860645164822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,8 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5b5b065e51b47a68810f64b9f6832b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 3
-  factor: 3
+  duration: 2
+  factor: 0.1
+  txtManager: {fileID: 0}
+  substitutes: []
 --- !u!114 &114892614009198128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,8 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: {x: 0, y: 1}
-  speed: 5
-  duration: 4
+  speed: 0.5
+  duration: 2
   curve:
     serializedVersion: 2
     m_Curve:
@@ -138,6 +142,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  txtManager: {fileID: 0}
+  substitutes: []
 --- !u!222 &222932124989777976
 CanvasRenderer:
   m_ObjectHideFlags: 1

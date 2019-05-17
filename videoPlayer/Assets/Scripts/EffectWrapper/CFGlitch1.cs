@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CFGlitch1 : KTEffectBase {
 
+		public override MonoBehaviour GetEffect() {
+			return effect2;
+		}
+
 		public CameraFilterPack_FX_Glitch1 effect2;
 
     public override void SetEffectActive(bool enable)

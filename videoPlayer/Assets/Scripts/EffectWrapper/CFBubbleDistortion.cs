@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CFBubbleDistortion : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public CameraFilterPack_Special_Bubble effect;
 
 	public override void SetEffectActive(bool enable)

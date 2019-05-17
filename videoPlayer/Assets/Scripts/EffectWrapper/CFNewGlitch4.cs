@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CFNewGlitch4 : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public CameraFilterPack_NewGlitch4 effect;
 
 	public override void SetEffectActive(bool enable)

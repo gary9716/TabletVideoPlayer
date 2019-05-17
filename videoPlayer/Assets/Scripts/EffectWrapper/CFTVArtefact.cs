@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CFTVArtefact : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public CameraFilterPack_TV_Artefact effect;
 
 	public override void SetEffectActive(bool enable)

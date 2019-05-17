@@ -33,6 +33,11 @@ public class Jitter : MonoBehaviour {
 		StartCoroutine(JitterAnim());
 	}
 
+	void OnDisable()
+	{
+		StopAllCoroutines();
+	}
+
 	IEnumerator JitterAnim() {
 		var curTrans = transform;
 		float time = 0;

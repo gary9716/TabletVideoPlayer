@@ -1,25 +1,25 @@
-FishOnBoard							Reporters							DancerLook											Feed						
-/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/play-video	NewsAll.mp4	-1	-1	1	-1	-1	/cmd-list	0	/play-video	dancer1-look.mp4	0	0.25	0	-1	-1	/pause-video		/play-video	dancer1-masked-low.mp4	-1	-1	1	-1	-1
-/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/play-video	NewsAll.mp4	-1	-1	1	-1	-1	/cmd-list	0	/play-video	dancer2-look.mp4	0	0.23	0	-1	-1	/pause-video		/play-video	dancer2-masked-low.mp4	-1	-1	1	-1	-1
-/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/play-video	NewsAll.mp4	-1	-1	1	-1	-1	/cmd-list	0	/play-video	dancer3-look.mp4	0	0.23	0	-1	-1	/pause-video		/play-video	dancer3-masked-low.mp4	-1	-1	1	-1	-1
-/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/play-video	NewsAll.mp4	-1	-1	1	-1	-1	/cmd-list	0	/play-video	dancer4-look.mp4	0	0.23	0	-1	-1	/pause-video		/play-video	dancer4-masked-low.mp4	-1	-1	1	-1	-1
-/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/play-video	NewsAll.mp4	-1	-1	1	-1	-1	/cmd-list	0	/play-video	dancer5-look.mp4	0	0.23	0	-1	-1	/pause-video		/play-video	dancer5-masked-low.mp4	-1	-1	1	-1	-1
-/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/play-video	NewsAll.mp4	-1	-1	1	-1	-1	/cmd-list	0	/play-video	dancer1-look.mp4	0	0.25	0	-1	-1	/pause-video		/play-video	dancer1-masked-low.mp4	-1	-1	1	-1	-1
-														/cmd-list	0	/continue-video	0.6	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.58	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.58	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.58	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.54	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.6	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.97	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.97	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.97	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.97	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.97	-1	-1	/pause-video											
-														/cmd-list	0	/continue-video	0.97	-1	-1	/pause-video											
-														/stop-video																	
-														/stop-video																	
-														/stop-video																	
-														/stop-video																	
-														/stop-video																	
-														/stop-video																	
+FishOnBoard_SyncBtn_Set						FishOnBoard_SyncBtn_Set_End	News_SyncBtn_Set										News_SyncBtn_Set_End	DancerLook_SyncBtn_Set										DancerLook_SyncBtn_Set_End	Feed_SyncBtn_Set						Feed_SyncBtn_Set_End				
+/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	-1	-1	1	-1	-1	/cmd-list	0	/play-video	dancer1-look.mp4	0	0.25	0	-1	-1	/pause-video		/play-video	dancer1-masked-low.mp4	-1	-1	1	-1	-1				
+/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.2	-1	1	0.2	-1	/cmd-list	0	/play-video	dancer2-look.mp4	0	0.23	0	-1	-1	/pause-video		/play-video	dancer2-masked-low.mp4	-1	-1	1	-1	-1				
+/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.5	-1	1	0.5	-1	/cmd-list	0	/play-video	dancer3-look.mp4	0	0.23	0	-1	-1	/pause-video		/play-video	dancer3-masked-low.mp4	-1	-1	1	-1	-1				
+/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.8	-1	1	0.8	-1	/cmd-list	0	/play-video	dancer4-look.mp4	0	0.23	0	-1	-1	/pause-video		/play-video	dancer4-masked-low.mp4	-1	-1	1	-1	-1				
+/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.4	-1	1	0.4	-1	/cmd-list	0	/play-video	dancer5-look.mp4	0	0.22	0	-1	-1	/pause-video		/play-video	dancer5-masked-low.mp4	-1	-1	1	-1	-1				
+/play-video	Fishonboard-low.mp4	-1	-1	1	-1	-1	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.6	-1	1	0.6	-1	/cmd-list	0	/play-video	dancer1-look.mp4	0	0.25	0	-1	-1	/pause-video		/play-video	dancer1-masked-low.mp4	-1	-1	1	-1	-1				
+																		/cmd-list	0	/continue-video	0.6	-1	-1	/pause-video					/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+																		/cmd-list	0	/continue-video	0.58	-1	-1	/pause-video					/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+																		/cmd-list	0	/continue-video	0.58	-1	-1	/pause-video					/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+																		/cmd-list	0	/continue-video	0.58	-1	-1	/pause-video					/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+																		/cmd-list	0	/continue-video	0.5	-1	-1	/pause-video					/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+																		/cmd-list	0	/continue-video	0.6	-1	-1	/pause-video					/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1
+																		/cmd-list	0	/continue-video	0.97	-1	-1	/pause-video															
+																		/cmd-list	0	/continue-video	0.92	-1	-1	/pause-video															
+																		/cmd-list	0	/continue-video	0.96	-1	-1	/pause-video															
+																		/cmd-list	0	/continue-video	0.97	-1	-1	/pause-video															
+																		/cmd-list	0	/continue-video	0.87	-1	-1	/pause-video															
+																		/cmd-list	0	/continue-video	0.97	-1	-1	/pause-video															
+																		/stop-video																					
+																		/stop-video																					
+																		/stop-video																					
+																		/stop-video																					
+																		/stop-video																					
+																		/stop-video																					

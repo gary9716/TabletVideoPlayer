@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CFDistortionFlag : KTEffectBase {
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public CameraFilterPack_Distortion_Flag effect;
 
 	public override void SetEffectActive(bool enable)

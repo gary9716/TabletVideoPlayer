@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CFDissipation : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public CameraFilterPack_Distortion_Dissipation effect;
 
 	public override void SetEffectActive(bool enable)

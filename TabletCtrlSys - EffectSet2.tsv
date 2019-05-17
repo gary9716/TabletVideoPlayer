@@ -1,0 +1,33 @@
+THMonster_Effect_Set	sliderVal	effect name	device index	cmd name	effect-index	toRecord	i	param-index	val	...							THMonster_Effect_Set_End	Feed_Effect_Set	sliderVal	effect name	device index	cmd name	effect-index	toRecord	i	param-index	val						Feed_Effect_Set_End
+							s	start-param-index	following-param-count	param1	param2	...													s	start-param-index	following-param-count	param1					
+s10		broken screen	0	/set-effect-param	3	1	s	0	2	{sv}	0.7							s10		vcrDistortion	0	/set-effect-param	16	1	i	0	{sv}						
+s13		broken screen	1	/set-effect-param	3	1	s	0	2	{sv}	0.7							s13		vcrDistortion	1	/set-effect-param	16	1	i	0	{sv}						
+s16		broken screen	2	/set-effect-param	3	1	s	0	2	{sv}	0.7							s16		vcrDistortion	2	/set-effect-param	16	1	i	0	{sv}						
+s19		broken screen	3	/set-effect-param	3	1	s	0	2	{sv}	0.7							s19		vcrDistortion	3	/set-effect-param	16	1	i	0	{sv}						
+s22		broken screen	4	/set-effect-param	3	1	s	0	2	{sv}	0.7							s22		vcrDistortion	4	/set-effect-param	16	1	i	0	{sv}						
+s25		broken screen	5	/set-effect-param	3	1	s	0	2	{sv}	0.7							s25		vcrDistortion	5	/set-effect-param	16	1	i	0	{sv}						
+s28		broken screen	-1	/set-effect-param	3	1	s	0	2	{sv}	0.7							s28		vcrDistortion	-1	/set-effect-param	16	1	i	0	{sv}						
+s11		flag distortion	0	/set-effect-param	8	1	i	0	{sv}									s1		video alpha	0	/set-effect-param	2	1	i	0	{sv}						
+s14		flag distortion	1	/set-effect-param	8	1	i	0	{sv}									s2		video alpha	1	/set-effect-param	2	1	i	0	{sv}						
+s17		flag distortion	2	/set-effect-param	8	1	i	0	{sv}									s3		video alpha	2	/set-effect-param	2	1	i	0	{sv}						
+s20		flag distortion	3	/set-effect-param	8	1	i	0	{sv}									s4		video alpha	3	/set-effect-param	2	1	i	0	{sv}						
+s23		flag distortion	4	/set-effect-param	8	1	i	0	{sv}									s5		video alpha	4	/set-effect-param	2	1	i	0	{sv}						
+s26		flag distortion	5	/set-effect-param	8	1	i	0	{sv}									s6		video alpha	5	/set-effect-param	2	1	i	0	{sv}						
+s29		flag distortion	-1	/set-effect-param	8	1	i	0	{sv}									s7		video alpha	-1	/set-effect-param	2	1	i	0	{sv}						
+s12		chromatic	0	/set-effect-param	5	1	i	0	{sv * 0.06}									s33		bg a channel	-1	/set-effect-param	0	0	i	3	{sv}						
+s15		chromatic	1	/set-effect-param	5	1	i	0	{sv * 0.06}									s31		feedback ctrl	-1	/set-effect-param	18	1	i	0	0	i	1	0	i	2	{sv}
+s18		chromatic	2	/set-effect-param	5	1	i	0	{sv * 0.06}									s32		feedback ctrl	-1	/set-effect-param	18	1	i	0	0	i	1	0	i	3	{sv}
+s21		chromatic	3	/set-effect-param	5	1	i	0	{sv * 0.06}																								
+s24		chromatic	4	/set-effect-param	5	1	i	0	{sv * 0.06}																								
+s27		chromatic	5	/set-effect-param	5	1	i	0	{sv * 0.06}																								
+s30		chromatic	-1	/set-effect-param	5	1	i	0	{sv * 0.06}																								
+s1		video alpha	0	/set-effect-param	2	1	i	0	{sv}																								
+s2		video alpha	1	/set-effect-param	2	1	i	0	{sv}																								
+s3		video alpha	2	/set-effect-param	2	1	i	0	{sv}																								
+s4		video alpha	3	/set-effect-param	2	1	i	0	{sv}																								
+s5		video alpha	4	/set-effect-param	2	1	i	0	{sv}																								
+s6		video alpha	5	/set-effect-param	2	1	i	0	{sv}																								
+s7		video alpha	-1	/set-effect-param	2	1	i	0	{sv}																								
+s33		bg a channel	-1	/set-effect-param	0	0	i	3	{sv}																								
+s31		feedback ctrl	-1	/set-effect-param	18	1	i	0	0	i	1	0	i	2	{sv}																		
+s32		feedback ctrl	-1	/set-effect-param	18	1	i	0	0	i	1	0	i	3	{sv}																		

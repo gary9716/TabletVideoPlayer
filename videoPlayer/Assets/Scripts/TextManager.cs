@@ -1,4 +1,4 @@
-﻿//#define EFFECT_TEST
+﻿#define EFFECT_TEST
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +10,10 @@ public class TextManager : KTEffectBase {
 	public enum Orientation {
 		Horizontal = 0,
 		Vertical
+	}
+
+	public override MonoBehaviour GetEffect() {
+		return this;
 	}
 
 	public TextAsset sentencesInfo;
@@ -41,6 +45,12 @@ public class TextManager : KTEffectBase {
 			}
 			sentenceDataArray[lineIndex] = data;
 			lineIndex++;
+		}
+	}
+
+	public void DespawnAll() {
+		foreach(Transform trans in rootCanvas.transform) {
+			LeanPool.Despawn(trans.gameObject);
 		}
 	}
 
@@ -126,10 +136,10 @@ public class TextManager : KTEffectBase {
 
 		var pos = new Vector3();
 		var val = Random.value;
-		var range = val * 0.4f + 0.3f;	
+		var range = val * 0.8f + 0.1f;	
 		var sinVal = (Mathf.Sin(range * 3.14f) + 1)/2;
-		var range2 = sinVal * range;
-		pos.y = corners[0].y * range2 + (corners[2].y) * (1 - range2);
+		//var range2 = sinVal * range;
+		pos.y = corners[0].y * range + (corners[2].y) * (1 - range);
 		pos.x = corners[0].x * range + (corners[2].x) * (1 - range);
 
 		pos.x = posX >= 0? (corners[0].x * posX + corners[2].x * (1 - posX)):pos.x;
@@ -141,7 +151,7 @@ public class TextManager : KTEffectBase {
 		if(orientation == Orientation.Horizontal) {
 			size.y = fontSize + 2;
 			txt.horizontalOverflow = HorizontalWrapMode.Overflow;
-			txt.verticalOverflow = VerticalWrapMode.Truncate;
+			txt.verticalOverflow = VerticalWrapMode.Overflow;
 		}
 		else {
 			size.x = fontSize + 2;
@@ -215,7 +225,7 @@ public class TextManager : KTEffectBase {
 			}
 			else if(useGlobalParam) {
 				duration = this.duration;
-				factor = jitterFactor;
+				factor = this.jitterFactor;
 			}
 
 			effect.factor = factor;
@@ -330,10 +340,13 @@ public class TextManager : KTEffectBase {
 		isAnimating = enable;
 		if(enable) {
 			if(activeIndex >= 0 && activeIndex < 3) {
-				if(sentenceIndex < 0) ShowText();
-				else {
-					ShowText(sentenceDataArray[sentenceIndex], orientation, fontSize, posX, posY, activeIndex, null, true);
+				if(sentenceIndex < 0) {
+					var newIndex = (int)Random.Range(0, sentenceDataArray.Length);
+					if(newIndex == sentenceDataArray.Length) newIndex = sentenceDataArray.Length - 1;
+					sentenceIndex = newIndex;
 				}
+				
+				ShowText(sentenceDataArray[sentenceIndex], orientation, fontSize, posX, posY, activeIndex, null, true);
 			}
 			else {
 				StartCoroutine(PeriodicallyShow(interval));

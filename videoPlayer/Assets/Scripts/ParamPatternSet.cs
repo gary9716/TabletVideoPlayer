@@ -125,7 +125,7 @@ public class EasingFuncSeq : ParamFunc {
 		for(int i = 1;i < parameters.Count;i += 3) {
 			int funcIndex = int.Parse(parameters[i].ToString());
 			float endVal = float.Parse(parameters[i+1].ToString());
-			float endTime = int.Parse(parameters[i+2].ToString());
+			float endTime = float.Parse(parameters[i+2].ToString());
 			endValList.Add(endVal);
 			easingList.Add(EasingFunction.GetEasingFunction((EasingFunction.Ease)funcIndex));
 			endTimeList.Add(endTime);
@@ -133,14 +133,15 @@ public class EasingFuncSeq : ParamFunc {
 	}
 
 	public float GetValue(float progress) {
-		while(curFuncIndex < endTimeList.Count)
-			if(progress > endTimeList[curFuncIndex]) {
-				startVal = endValList[curFuncIndex];
-				curFuncIndex++;
-			}
+		if(curFuncIndex < endTimeList.Count && progress > endTimeList[curFuncIndex]) {
+			startVal = endValList[curFuncIndex];
+			curFuncIndex++;
+		}
 
 		if(curFuncIndex == endTimeList.Count) curFuncIndex = endTimeList.Count - 1;
-		return easingList[curFuncIndex](startVal, endValList[curFuncIndex], progress);
+		var start = curFuncIndex > 0? endTimeList[curFuncIndex - 1] : 0;
+		var newProgress = (progress - start) / (endTimeList[curFuncIndex] - start);
+		return easingList[curFuncIndex](startVal, endValList[curFuncIndex], newProgress);
 	}
 
 }

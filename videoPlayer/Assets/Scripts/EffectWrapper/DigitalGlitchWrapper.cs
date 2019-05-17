@@ -4,6 +4,10 @@ using UnityEngine;
 using Kino;
 public class DigitalGlitchWrapper : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public DigitalGlitch effect;
 	
 	public override void SetParameter(int index, float val) {

@@ -59,29 +59,42 @@ public abstract class KTEffectBase : MonoBehaviour,IEffectCtrler {
 		paramIndices.Add(paramIndex);
 	}
 
-	public void TriggerEffect() {
+	public void TriggerEffect(System.Action cb) {
 		StopAllCoroutines();
-		StartCoroutine(EvaluateRoutine());
+		StartCoroutine(EvaluateRoutine(cb));
 	}
 
-	IEnumerator EvaluateRoutine() {
+	IEnumerator EvaluateRoutine(System.Action cb) {
 		float timer = 0;
 		if(Mathf.Approximately(triggeredEffectDuration, 0)) yield break;
+		//enable effect
+
+		var effect = GetEffect();
+		if(effect != null)
+			effect.enabled = true;
 
 		while(timer < triggeredEffectDuration) {
 			float progress = timer / triggeredEffectDuration;
 			for(int i = 0;i < paramIndices.Count;i++) {
 				int paramIndex = paramIndices[i];
 				var pattern = patterns[i];
-				SetParameter(paramIndex, pattern.GetValue(progress));
+				var value = pattern.GetValue(progress);
+				SetParameter(paramIndex, value);
 			}
 
 			yield return null;
 			timer += Time.deltaTime;
 		}
+
+		if(cb != null)
+			cb();
+
+		if(effect != null)
+			effect.enabled = false;
 	}
 
 	public abstract void SetParameter(int index, float val);
+	public abstract MonoBehaviour GetEffect();
 
 	public virtual void SetEffectActive(bool enable) {
 		if(!enable) StopAllCoroutines();

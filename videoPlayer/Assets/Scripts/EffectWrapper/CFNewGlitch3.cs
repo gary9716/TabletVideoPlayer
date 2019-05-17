@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CFNewGlitch3 : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
+
 	public CameraFilterPack_NewGlitch3 effect;
 
 	public override void SetEffectActive(bool enable)

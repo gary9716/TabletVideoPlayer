@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CFVCRDistortion : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public CameraFilterPack_TV_Vcr effect;
 
 	public override void SetEffectActive(bool enable)

@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CFTVDistorted : KTEffectBase {
+
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 	public CameraFilterPack_TV_Distorted effect;
 
 	public override void SetEffectActive(bool enable)

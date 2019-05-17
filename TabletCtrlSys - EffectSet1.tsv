@@ -1,0 +1,27 @@
+Cage_Effect_Set	sliderVal	effect name	device index	cmd name	effect-index	toRecord	i	param-index	val	...					Cage_Effect_Set_End	Insane_Effect_Set	sliderVal	effect name	device index	cmd name	effect-index	toRecord	i	param-index	val						Insane_Effect_Set_End
+							s	start-param-index	following-param-count	param1	param2	...											s	start-param-index	following-param-count				param1	param2	...
+s1		image alpha	0	/set-effect-param	1	1	i	0	2	i	9	{sv}				s8		bg r channel	-1	/set-effect-param	0	0	i	0	{sv}	i	3	{sv}			
+s2		image alpha	1	/set-effect-param	1	1	i	0	2	i	9	{sv}				s33		bg a channel	-1	/set-effect-param	0	0	i	3	{sv}						
+s3		image alpha	2	/set-effect-param	1	1	i	0	2	i	9	{sv}				s31		feedback ctrl	-1	/set-effect-param	18	1	i	0	0	i	1	0	i	2	{sv}
+s4		image alpha	3	/set-effect-param	1	1	i	0	2	i	9	{sv}				s32		feedback ctrl	-1	/set-effect-param	18	1	i	0	0	i	1	0	i	3	{sv}
+s5		image alpha	4	/set-effect-param	1	1	i	0	2	i	9	{sv}				s10		broken screen	0	/set-effect-param	3	1	s	0	2	{sv}	0.7				
+s6		image alpha	5	/set-effect-param	1	1	i	0	2	i	9	{sv}				s13		broken screen	1	/set-effect-param	3	1	s	0	2	{sv}	0.7				
+s7		image alpha	-1	/set-effect-param	1	1	i	0	2	i	9	{sv}				s16		broken screen	2	/set-effect-param	3	1	s	0	2	{sv}	0.7				
+s33		bg a channel	-1	/set-effect-param	0	0	i	3	{sv}							s19		broken screen	3	/set-effect-param	3	1	s	0	2	{sv}	0.7				
+s31		feedback ctrl	-1	/set-effect-param	18	1	i	0	0	i	1	0	i	2	{sv}	s22		broken screen	4	/set-effect-param	3	1	s	0	2	{sv}	0.7				
+s32		feedback ctrl	-1	/set-effect-param	18	1	i	0	0	i	1	0	i	3	{sv}	s25		broken screen	5	/set-effect-param	3	1	s	0	2	{sv}	0.7				
+																s28		broken screen	-1	/set-effect-param	3	1	s	0	2	{sv}	0.7				
+																s11		Analog Glitch	0	/set-effect-param	11	1	i	0	0.3	i	1	{sv}			
+																s14		Analog Glitch	1	/set-effect-param	11	1	i	0	0.3	i	1	{sv}			
+																s17		Analog Glitch	2	/set-effect-param	11	1	i	0	0.3	i	1	{sv}			
+																s20		Analog Glitch	3	/set-effect-param	11	1	i	0	0.3	i	1	{sv}			
+																s23		Analog Glitch	4	/set-effect-param	11	1	i	0	0.3	i	1	{sv}			
+																s26		Analog Glitch	5	/set-effect-param	11	1	i	0	0.3	i	1	{sv}			
+																s29		Analog Glitch	-1	/set-effect-param	11	1	i	0	0.3	i	1	{sv}			
+																s12		Bubble Distortion	0	/set-effect-param	9	1	i	2	{sv * 3}						
+																s15		Bubble Distortion	1	/set-effect-param	9	1	i	2	{sv * 3}						
+																s18		Bubble Distortion	2	/set-effect-param	9	1	i	2	{sv * 3}						
+																s21		Bubble Distortion	3	/set-effect-param	9	1	i	2	{sv * 3}						
+																s24		Bubble Distortion	4	/set-effect-param	9	1	i	2	{sv * 3}						
+																s27		Bubble Distortion	5	/set-effect-param	9	1	i	2	{sv * 3}						
+																s30		Bubble Distortion	-1	/set-effect-param	9	1	i	2	{sv * 3}						

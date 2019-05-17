@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class ImageAnimator : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return this;
+	}
+
 	public Image img;
 	
 	private int activeIndex = -1;
@@ -68,14 +72,15 @@ public class ImageAnimator : KTEffectBase {
 
 	public override void SetEffectActive(bool enable) {
 		base.SetEffectActive(enable);
-		isAnimating = enable;
 		if(enable) {
 			if(img.sprite == null) return;
 			switch(activeIndex) {
 				case 0:
+					isAnimating = enable;
 					StartCoroutine(AlphaAttackDecay(minA, maxA, attackDuration, attackFuncIndex, decayDuration, decayFuncIndex));
 					break;
 				case 1:
+					isAnimating = enable;
 					StartCoroutine(ConstantFlashing());
 					break;
 			}
@@ -136,7 +141,6 @@ public class ImageAnimator : KTEffectBase {
 			}
 		}
 
-		ResetImageAlpha();
 	}
 
 	IEnumerator ConstantFlashing() {
@@ -164,7 +168,6 @@ public class ImageAnimator : KTEffectBase {
 			img.color = color;
 		}
 	
-		ResetImageAlpha();
 	}
 
 }

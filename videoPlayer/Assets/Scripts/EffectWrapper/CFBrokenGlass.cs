@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CFBrokenGlass : KTEffectBase {
 
+	public override MonoBehaviour GetEffect() {
+		return effect;
+	}
+
 		public CameraFilterPack_Broken_Screen effect;
 
     public override void SetEffectActive(bool enable)

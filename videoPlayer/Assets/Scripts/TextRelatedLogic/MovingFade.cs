@@ -38,6 +38,11 @@ public class MovingFade : MonoBehaviour {
 		
 	}
 
+	void OnDisable()
+	{
+		StopAllCoroutines();
+	}
+
 	IEnumerator Animation() {
 		float time = 0;
 		var curTrans = transform;

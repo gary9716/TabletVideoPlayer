@@ -1,23 +1,12 @@
 {
     "clientIPs": [
-        "192.168.4.9"        
+        "192.168.4.41",
+        "192.168.4.42",
+        "192.168.4.43",
+        "192.168.4.39",
+        "192.168.4.40"
     ],
     "fileList": [
-        "0510/FriendlyAndRelaxed.mp4","0510/Laugh.mp4","0510/LookDown.mp4","0510/NewsAll.mp4","0510/Regret.mp4","0510/Sad.mp4","0510/SurprisedAndEmbarrassed.mp4","0510/Thinking.mp4","0510/UnhappyAndAngry.mp4","0510/VarEmoFace.mp4","0510/dancer1-look.mp4","0510/dancer2-look.mp4","0510/dancer3-look.mp4","0510/dancer4-look.mp4","0510/dancer5-look.mp4",
-        "0505/dancer1-masked-low.mp4",
-        "0505/dancer2-masked-low.mp4",
-        "0505/dancer3-masked-low.mp4",
-        "0505/dancer4-masked-low.mp4",
-        "0505/dancer5-masked-low.mp4",
-        "Fishonboard-low.mp4",
-        "tvnoise-low.mp4",
-        "mask1.jpg",
-        "mask2.png",
-        "mask3.jpg",
-        "mask4.jpg",
-        "mask5.jpg",
-        "mask6.jpg",
-        "mask7.jpg",
-        "mask8.jpg"
+        "0510/dancer5-look.mp4"
     ]
 }
