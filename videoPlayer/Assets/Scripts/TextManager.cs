@@ -1,4 +1,4 @@
-﻿#define EFFECT_TEST
+﻿//#define EFFECT_TEST
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
