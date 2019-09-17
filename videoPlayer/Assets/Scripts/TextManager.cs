@@ -69,7 +69,7 @@ public class TextManager : KTEffectBase {
 		rootCanvas.GetComponent<RectTransform>().GetWorldCorners(corners);
 		
 		#if EFFECT_TEST && UNITY_EDITOR
-		StartCoroutine(PeriodicallyShow(1));
+		//StartCoroutine(PeriodicallyShow(1));
 		#endif
 	}
 	
