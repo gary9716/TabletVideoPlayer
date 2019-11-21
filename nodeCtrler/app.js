@@ -2,10 +2,12 @@ const { Client,Server,Message } = require('node-osc');
 const _ = require('lodash');
 const config = require('./config.json');
 const path = require('path');
+var fs = require('fs');
 var clientIPs = config.clientIPs;
-var fileList = config.fileList;
-var progressIndices;
-var numDevicesDone = 0;
+//var fileList = config.fileList;
+var fileList = [];
+var relativePath = config.folder;
+var targetFolder = path.join("D:\\QuadrantFaktVideos",relativePath);
 
 function isImage(fileName) {
     let imgExt = [".png",".jpg",".jpeg"];
@@ -18,13 +20,47 @@ function isImage(fileName) {
     return false;
 }
 
+function isMP4(fileName) {
+    let videoExt = [".mp4"];
+    for(var ext of videoExt) {
+        if(fileName.indexOf(ext) > 0) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function listFiles() {
+    return new Promise((resolve, reject) => {
+        fs.readdir(targetFolder, (err, files) => {
+            if(err) reject(err);
+            files.forEach(file => {
+                let basename = path.basename(file);
+                if(isMP4(basename) || isImage(basename)) {
+                    fileList.push(file);
+                }
+            });
+
+            resolve();
+        });        
+    });
+}
+
+
+var progressIndices;
+var numDevicesDone = 0;
+
 function getURL(fileName) {
+    /*
     if(isImage(fileName)) {
-        return 'http://' + oscServerIP + '/img/' + fileName;
+        return 'http://' + oscServerIP + '/Imgs/' + fileName;
     }
     else {
-        return 'http://' + oscServerIP + '/video/' + fileName;
+        return 'http://' + oscServerIP + '/Videos/' + fileName;
     }
+    */
+    return "http://" + oscServerIP + relativePath + fileName;
     
 }
 
@@ -76,8 +112,9 @@ let getIP = (interfaceName) => {
     return targetIP;
 }
 var oscServerPort = 8000;
-var oscServerIP = getIP("en0");
-if(!oscServerIP) oscServerIP = getIP("en1");
+//var oscServerIP = getIP("en0");
+//if(!oscServerIP) oscServerIP = getIP("en1");
+var oscServerIP = config.serverIP;
 console.log('osc server ip:' + oscServerIP);
 var oscServer = new Server(oscServerPort, '0.0.0.0');
 
@@ -139,6 +176,6 @@ function DownloadListOfFiles() {
             console.error(new Error(err));
     });
 }
-DownloadListOfFiles();
+listFiles().then(DownloadListOfFiles);
 
 

@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -14,7 +15,128 @@ MonoBehaviour:
   hashCode: 2076631182
   material: {fileID: 21320362611399208}
   materialHashCode: 1891091525
-  fontAssetType: 1
+  m_Version: 1.1.0
+  m_SourceFontFileGUID: b0f9b63bf6f9c49ddb36d655239f3e04
+  m_SourceFontFile_EditorRef: {fileID: 0}
+  m_SourceFontFile: {fileID: 0}
+  m_AtlasPopulationMode: 0
+  m_FaceInfo:
+    m_FamilyName: Noto Sans CJK TC
+    m_StyleName: 
+    m_PointSize: 256
+    m_Scale: 1
+    m_LineHeight: 378.875
+    m_AscentLine: 297
+    m_CapLine: 0
+    m_MeanLine: 0
+    m_Baseline: 0
+    m_DescentLine: -81.9375
+    m_SuperscriptOffset: 297
+    m_SuperscriptSize: 0.5
+    m_SubscriptOffset: -38.4
+    m_SubscriptSize: 0.5
+    m_UnderlineOffset: -38.4
+    m_UnderlineThickness: 12.8
+    m_StrikethroughOffset: 78.204544
+    m_StrikethroughThickness: 12.8
+    m_TabWidth: 640
+  m_GlyphTable:
+  - m_Index: 1
+    m_Metrics:
+      m_Width: 239.87498
+      m_Height: 243.93748
+      m_HorizontalBearingX: 8.187499
+      m_HorizontalBearingY: 218.93748
+      m_HorizontalAdvance: 256
+    m_GlyphRect:
+      m_X: 258
+      m_Y: 6
+      m_Width: 240
+      m_Height: 244
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 2
+    m_Metrics:
+      m_Width: 235.99998
+      m_Height: 244.93748
+      m_HorizontalBearingX: 10.187499
+      m_HorizontalBearingY: 219.93748
+      m_HorizontalAdvance: 256
+    m_GlyphRect:
+      m_X: 258
+      m_Y: 261
+      m_Width: 236
+      m_Height: 245
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 3
+    m_Metrics:
+      m_Width: 240.12498
+      m_Height: 246.24998
+      m_HorizontalBearingX: 7.1249995
+      m_HorizontalBearingY: 221.49998
+      m_HorizontalAdvance: 256
+    m_GlyphRect:
+      m_X: 6
+      m_Y: 7
+      m_Width: 240
+      m_Height: 246
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 4
+    m_Metrics:
+      m_Width: 215.49998
+      m_Height: 234.99998
+      m_HorizontalBearingX: 20.187498
+      m_HorizontalBearingY: 210.74998
+      m_HorizontalAdvance: 256
+    m_GlyphRect:
+      m_X: 6
+      m_Y: 264
+      m_Width: 215
+      m_Height: 235
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 0
+    m_Metrics:
+      m_Width: 0
+      m_Height: 0
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 0
+      m_HorizontalAdvance: 59.4
+    m_GlyphRect:
+      m_X: 0
+      m_Y: 0
+      m_Width: 0
+      m_Height: 0
+    m_Scale: 1
+    m_AtlasIndex: 0
+  m_CharacterTable:
+  - m_ElementType: 1
+    m_Unicode: 20107
+    m_GlyphIndex: 1
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 22810
+    m_GlyphIndex: 2
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 31649
+    m_GlyphIndex: 3
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 38290
+    m_GlyphIndex: 4
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 32
+    m_GlyphIndex: 0
+    m_Scale: 1
+  m_AtlasTextures:
+  - {fileID: 28388770196087740}
+  m_AtlasTextureIndex: 0
+  m_UsedGlyphRects: []
+  m_FreeGlyphRects: []
   m_fontInfo:
     Name: Noto Sans CJK TC
     PointSize: 256
@@ -38,6 +160,10 @@ MonoBehaviour:
     AtlasWidth: 512
     AtlasHeight: 512
   atlas: {fileID: 28388770196087740}
+  m_AtlasWidth: 512
+  m_AtlasHeight: 512
+  m_AtlasPadding: 5
+  m_AtlasRenderMode: 16426
   m_glyphInfoList:
   - id: 20107
     x: 258
@@ -75,23 +201,12 @@ MonoBehaviour:
     yOffset: 210.74998
     xAdvance: 256
     scale: 1
-  m_kerningInfo:
+  m_KerningTable:
     kerningPairs: []
-  m_kerningPair:
-    m_FirstGlyph: 0
-    m_FirstGlyphAdjustments:
-      xPlacement: 0
-      yPlacement: 0
-      xAdvance: 0
-      yAdvance: 0
-    m_SecondGlyph: 0
-    m_SecondGlyphAdjustments:
-      xPlacement: 0
-      yPlacement: 0
-      xAdvance: 0
-      yAdvance: 0
-    xOffset: 0
+  m_FontFeatureTable:
+    m_GlyphPairAdjustmentRecords: []
   fallbackFontAssets: []
+  m_FallbackFontAssetTable: []
   m_CreationSettings:
     sourceFontFileName: 
     sourceFontFileGUID: b0f9b63bf6f9c49ddb36d655239f3e04
@@ -109,6 +224,27 @@ MonoBehaviour:
     fontStyleModifier: 2
     renderMode: 6
     includeFontFeatures: 0
+  m_FontWeightTable:
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
   fontWeights:
   - regularTypeface: {fileID: 0}
     italicTypeface: {fileID: 0}
@@ -141,7 +277,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: textSet1 Material
   m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
   m_ShaderKeywords: 
@@ -248,7 +385,8 @@ Material:
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: textSet1 Atlas
   m_ImageContentsHash:
     serializedVersion: 2

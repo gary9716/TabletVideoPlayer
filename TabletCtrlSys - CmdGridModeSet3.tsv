@@ -1,7 +1,37 @@
-DancerLook_CmdGrid_Set										DancerLook_CmdGrid_Set_End
-/cmd-list	0	/play-video	dancer1-look.mp4	0	0.25	0	-1	-1	/pause-video	
-/cmd-list	0	/play-video	dancer2-look.mp4	0	0.23	0	-1	-1	/pause-video	
-/cmd-list	0	/play-video	dancer3-look.mp4	0	0.23	0	-1	-1	/pause-video	
-/cmd-list	0	/play-video	dancer4-look.mp4	0	0.23	0	-1	-1	/pause-video	
-/cmd-list	0	/play-video	dancer5-look.mp4	0	0.22	0	-1	-1	/pause-video	
-/cmd-list	0	/play-video	dancer1-look.mp4	0	0.25	0	-1	-1	/pause-video	
+DancerLook_CmdGrid_Set										DancerLook_CmdGrid_Set_End	MonitorJudge_CmdGrid_Set							MonitorJudge_CmdGrid_Set_End
+/cmd-list	0	/play-video	dancer1-look.mp4	0	0.36	0	-1	-1	/pause-video		/play-video	le1.mp4	-1	-1	1	-1	-1	
+/cmd-list	0	/play-video	dancer2-look.mp4	0	0.36	0	-1	-1	/pause-video		/play-video	le3.mp4	-1	-1	1	-1	-1	
+/cmd-list	0	/play-video	dancer3-look.mp4	0	0.39	0	-1	-1	/pause-video		/play-video	le4.mp4	-1	-1	1	-1	-1	
+/cmd-list	0	/play-video	dancer4-look.mp4	0	0.35	0	-1	-1	/pause-video		/play-video	le5.mp4	-1	-1	1	-1	-1	
+/cmd-list	0	/play-video	dancer5-look.mp4	0	0.36	0	-1	-1	/pause-video		/play-video	le6.mp4	-1	-1	1	-1	-1	
+/cmd-list	0	/play-video	dancer1-look.mp4	0	0.36	0	-1	-1	/pause-video		/play-video	le1.mp4	-1	-1	1	-1	-1	
+											/play-video	bv1.mp4	-1	-1	1	-1	-1	
+											/play-video	bv2.mp4	-1	-1	1	-1	-1	
+											/play-video	bv3.mp4	-1	-1	1	-1	-1	
+											/play-video	bv4.mp4	-1	-1	1	-1	-1	
+											/play-video	bv5.mp4	-1	-1	1	-1	-1	
+											/play-video	bv1.mp4	-1	-1	1	-1	-1	
+											/play-video	bv2.mp4	-1	-1	1	-1	-1	
+											/play-video	bv3.mp4	-1	-1	1	-1	-1	
+											/play-video	bv4.mp4	-1	-1	1	-1	-1	
+											/play-video	bv5.mp4	-1	-1	1	-1	-1	
+											/play-video	bv1.mp4	-1	-1	1	-1	-1	
+											/play-video	bv2.mp4	-1	-1	1	-1	-1	
+											/play-video	bv3.mp4	-1	-1	1	-1	-1	
+											/play-video	bv4.mp4	-1	-1	1	-1	-1	
+											/play-video	bv5.mp4	-1	-1	1	-1	-1	
+											/play-video	bv1.mp4	-1	-1	1	-1	-1	
+											/play-video	bv2.mp4	-1	-1	1	-1	-1	
+											/play-video	bv3.mp4	-1	-1	1	-1	-1	
+											/play-video	bv4.mp4	-1	-1	1	-1	-1	
+											/play-video	bv5.mp4	-1	-1	1	-1	-1	
+											/play-video	bv1.mp4	-1	-1	1	-1	-1	
+											/play-video	bv2.mp4	-1	-1	1	-1	-1	
+											/play-video	bv3.mp4	-1	-1	1	-1	-1	
+											/play-video	bv4.mp4	-1	-1	1	-1	-1	
+											/play-video	bv5.mp4	-1	-1	1	-1	-1	
+											/play-video	bv1.mp4	-1	-1	1	-1	-1	
+											/play-video	bv2.mp4	-1	-1	1	-1	-1	
+											/play-video	bv3.mp4	-1	-1	1	-1	-1	
+											/play-video	bv4.mp4	-1	-1	1	-1	-1	
+											/play-video	bv5.mp4	-1	-1	1	-1	-1	

@@ -9,7 +9,6 @@ using UnityOSC;
 using System.IO;
 using UnityEngine.Networking;
 using System.Net;
-using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using FunPlus.DeviceUtils;
 using Lean.Pool;
@@ -28,12 +27,11 @@ public class OSCDaemon : MonoBehaviour
 	public KTEffectBase[] effectList;
 	public Canvas txtCanvas;
 	public Canvas bgCanvas;
-
 	public TextManager txtManager;
-
 	public ParamPatternSet patternSet;
+    public TextAsset dancerList;
 
-	private OSCReciever reciever;
+    private OSCReciever reciever;
 	private string targetServerIP;
 	private int port;
 	private OSCClient oscClient;
@@ -54,19 +52,12 @@ public class OSCDaemon : MonoBehaviour
 	}
 	private Dictionary<string, VideoPlayer> playerCache = new Dictionary<string, VideoPlayer>();
 	private Dictionary<string, Sprite> imgCache = new Dictionary<string, Sprite>();
-
-	
 	private float loopingStartPos = -1;
 	private float loopingStopPos = -1;
-
 	private float firstPlayStartPos = 0;
 	private float firstPlayStopPos = -1;
-
 	private long stopFrame = -1;
-
-	public TextAsset dancerList;
 	private string[] dancerNames;
-	
 	EffectParamsRecording paramRecording = new EffectParamsRecording();
 	
 	bool isPlayingRecord {
@@ -93,11 +84,8 @@ public class OSCDaemon : MonoBehaviour
 		myIP = GetLocalIPAddress();
 		StartCoroutine(ShowInfoForFixedDuration("v" + Application.version + ";" + myIP, 10, 60, 1));
 		DeviceUtils.SetScreenBrightness(255);
-
-		#if EFFECT_TEST && UNITY_EDITOR
-		
-		#endif
-	}
+        
+    }
 
 	IEnumerator ShowInfoForFixedDuration(string msg,float duration,int size, int level = 0) {
 		#if NO_DEBUG_SHOW
