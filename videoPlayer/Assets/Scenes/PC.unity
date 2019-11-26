@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2806,7 +2806,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596247557}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 4
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3199,7 +3199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -4252,6 +4252,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TxtManager
       objectReference: {fileID: 0}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: rootCanvas
+      value: 
+      objectReference: {fileID: 1215570414}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: txtPrefab
+      value: 
+      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
+        type: 3}
     - target: {fileID: 4763858590232504, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
       propertyPath: m_LocalPosition.x
       value: 182.83519
@@ -4284,17 +4295,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: rootCanvas
-      value: 
-      objectReference: {fileID: 1215570414}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: txtPrefab
-      value: 
-      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
 --- !u!1 &901923761
@@ -4772,6 +4772,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TxtManager
       objectReference: {fileID: 0}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: rootCanvas
+      value: 
+      objectReference: {fileID: 90977843}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: txtPrefab
+      value: 
+      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
+        type: 3}
     - target: {fileID: 4763858590232504, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
       propertyPath: m_LocalPosition.x
       value: 182.83519
@@ -4804,17 +4815,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: rootCanvas
-      value: 
-      objectReference: {fileID: 90977843}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: txtPrefab
-      value: 
-      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
 --- !u!114 &978913122 stripped
@@ -5539,7 +5539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -5681,7 +5681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -5867,7 +5867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -6750,6 +6750,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TxtManager
       objectReference: {fileID: 0}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: rootCanvas
+      value: 
+      objectReference: {fileID: 698420147}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: txtPrefab
+      value: 
+      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
+        type: 3}
     - target: {fileID: 4763858590232504, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
       propertyPath: m_LocalPosition.x
       value: 182.83519
@@ -6782,17 +6793,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: rootCanvas
-      value: 
-      objectReference: {fileID: 698420147}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: txtPrefab
-      value: 
-      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
 --- !u!1 &1513906161
@@ -7835,7 +7835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -8415,6 +8415,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TxtManager
       objectReference: {fileID: 0}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: rootCanvas
+      value: 
+      objectReference: {fileID: 503930918}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: txtPrefab
+      value: 
+      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
+        type: 3}
     - target: {fileID: 4763858590232504, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
       propertyPath: m_LocalPosition.x
       value: 182.83519
@@ -8447,17 +8458,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: rootCanvas
-      value: 
-      objectReference: {fileID: 503930918}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: txtPrefab
-      value: 
-      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
 --- !u!1 &1904027175
@@ -9061,6 +9061,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TxtManager
       objectReference: {fileID: 0}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: rootCanvas
+      value: 
+      objectReference: {fileID: 1191074457}
+    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
+        type: 3}
+      propertyPath: txtPrefab
+      value: 
+      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
+        type: 3}
     - target: {fileID: 4763858590232504, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
       propertyPath: m_LocalPosition.x
       value: 182.83519
@@ -9093,17 +9104,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: rootCanvas
-      value: 
-      objectReference: {fileID: 1191074457}
-    - target: {fileID: 114428639434368356, guid: 50274612bd9b846b2af401a74a7bf856,
-        type: 3}
-      propertyPath: txtPrefab
-      value: 
-      objectReference: {fileID: 114199322388115284, guid: 90cc1e0db10c94a388f37e5b15e5bd74,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50274612bd9b846b2af401a74a7bf856, type: 3}
 --- !u!1 &2008753989
@@ -9219,7 +9219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

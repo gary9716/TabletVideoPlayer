@@ -1,52 +1,52 @@
-Device	News_CmdGrid_Set														News_CmdGrid_Set_End	Device	THMonster_CmdGrid_Set																					THMonster_CmdGrid_Set_End
-Device1_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						煩躁	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0	0.036	1	0	0.036
-Device2_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						微慍	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.053	0.083	1	0.053	0.083
-Device3_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						生氣	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.094	0.107	1	0.094	0.107
-Device4_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.115	0.118	1	0.115	0.118
-Device5_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.122	0.149	1	0.122	0.149
-Device6_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						友善	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.162	0.186	1	0.162	0.186
-Device1_Cmd2																後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.261	0.295	1	0.261	0.295
-Device2_Cmd2																放鬆	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.34	0.353	1	0.34	0.353
-Device3_Cmd2																開心	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.37	0.399	1	0.37	0.399
-Device4_Cmd2																狂喜	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.426	0.453	1	0.426	0.453
-Device5_Cmd2																狂喜2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.554	0.579	1	0.554	0.579
-Device6_Cmd2																不可置信	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.591	0.613	1	0.591	0.613
-Device1_Cmd3																搞砸	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.631	0.636	1	0.631	0.636
-Device2_Cmd3																非常悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.642	0.658	1	0.642	0.658
-Device3_Cmd3																不屑	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.715	0.729	1	0.715	0.729
-Device4_Cmd3																煩躁	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0	0.036	1	0	0.036
-Device5_Cmd3																微慍	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.053	0.083	1	0.053	0.083
-Device6_Cmd3																生氣	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.094	0.107	1	0.094	0.107
-Device1_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.115	0.118	1	0.115	0.118
-Device2_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.122	0.149	1	0.122	0.149
-Device3_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										友善	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.162	0.186	1	0.162	0.186
-Device4_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.261	0.295	1	0.261	0.295
-Device5_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										放鬆	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.34	0.353	1	0.34	0.353
-Device6_Cmd4	/cmd-list	0	/disable-effect	12	/continue-video	-1										開心	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.37	0.399	1	0.37	0.399
-Device1_Cmd5																狂喜	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.426	0.453	1	0.426	0.453
-Device2_Cmd5																狂喜2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.554	0.579	1	0.554	0.579
-Device3_Cmd5																不可置信	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.591	0.613	1	0.591	0.613
-Device4_Cmd5																搞砸	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.631	0.636	1	0.631	0.636
-Device5_Cmd5																非常悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.642	0.658	1	0.642	0.658
-Device6_Cmd5																不屑	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.715	0.729	1	0.715	0.729
-Device1_Cmd6																煩躁	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0	0.036	1	0	0.036
-Device2_Cmd6																微慍	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.053	0.083	1	0.053	0.083
-Device3_Cmd6																生氣	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.094	0.107	1	0.094	0.107
-Device4_Cmd6																後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.115	0.118	1	0.115	0.118
-Device5_Cmd6																悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.122	0.149	1	0.122	0.149
-Device6_Cmd6																友善	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.162	0.186	1	0.162	0.186
-Device1_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	-1	-1	1	-1	-1					後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.261	0.295	1	0.261	0.295
-Device2_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.2	-1	1	0.2	-1					放鬆	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.34	0.353	1	0.34	0.353
-Device3_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.5	-1	1	0.5	-1					開心	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.37	0.399	1	0.37	0.399
-Device4_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.8	-1	1	0.8	-1					狂喜	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.426	0.453	1	0.426	0.453
-Device5_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.4	-1	1	0.4	-1					狂喜2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.554	0.579	1	0.554	0.579
-Device6_Cmd7	/cmd-list	0	/disable-effect	-1	/play-video	NewsAll.mp4	0.6	-1	1	0.6	-1					不可置信	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.591	0.613	1	0.591	0.613
-Device1_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					搞砸	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.631	0.636	1	0.631	0.636
-Device2_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					非常悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.642	0.658	1	0.642	0.658
-Device3_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					不屑	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.715	0.729	1	0.715	0.729
-Device4_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					煩躁	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0	0.036	1	0	0.036
-Device5_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					微慍	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.053	0.083	1	0.053	0.083
-Device6_Cmd8	/cmd-list	0	/disable-effect	-1	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					生氣	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.094	0.107	1	0.094	0.107
+Device	News_CmdGrid_Set											News_CmdGrid_Set_End				Device	THMonster_CmdGrid_Set																					THMonster_CmdGrid_Set_End
+Device1_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						煩躁	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.018	0.085	1	0.018	0.085
+Device2_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						微慍	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.09	0.154	1	0.09	0.154
+Device3_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						生氣	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.155	0.228	1	0.155	0.228
+Device4_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.26	0.33	1	0.26	0.33
+Device5_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.338	0.392	1	0.338	0.392
+Device6_Cmd1	/cmd-list	0	/pause-video	1	/set-effect-param	12	0	i	0	0.5						友善	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.423	0.463	1	0.423	0.463
+Device1_Cmd2	/cmd-list	0	/disable-effect	12	/continue-video	-1										後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.473	0.547	1	0.473	0.547
+Device2_Cmd2	/cmd-list	0	/disable-effect	12	/continue-video	-1										放鬆	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.561	0.586	1	0.561	0.586
+Device3_Cmd2	/cmd-list	0	/disable-effect	12	/continue-video	-1										開心	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.627	0.658	1	0.627	0.658
+Device4_Cmd2	/cmd-list	0	/disable-effect	12	/continue-video	-1										狂喜	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.658	0.696	1	0.658	0.696
+Device5_Cmd2	/cmd-list	0	/disable-effect	12	/continue-video	-1										狂喜2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.689	0.719	1	0.689	0.719
+Device6_Cmd2	/cmd-list	0	/disable-effect	12	/continue-video	-1										不可置信	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.724	0.78	1	0.724	0.78
+Device1_Cmd3	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0.43	0.5	1	0.43	0.5		6			搞砸	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.802	0.857	1	0.802	0.857
+Device2_Cmd3	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.11	0.45	1	0.11	0.45		8			非常悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.87	0.913	1	0.87	0.913
+Device3_Cmd3	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0	0.17	1	0	0.17		4			不屑	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.929	0.972	1	0.929	0.972
+Device4_Cmd3	/cmd-list	0	/disable-effect	12	/play-video	women.mp4	0.31	0.57	1	0.31	0.57		2			煩躁	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.018	0.085	1	0.018	0.085
+Device5_Cmd3	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.11	0.45	1	0.11	0.45		8			微慍	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.09	0.154	1	0.09	0.154
+Device6_Cmd3	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.11	0.45	1	0.11	0.45		8			生氣	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.155	0.228	1	0.155	0.228
+Device1_Cmd4	/cmd-list	0	/disable-effect	12	/play-video	women.mp4	0.61	0.99	1	0.61	0.99		3			後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.26	0.33	1	0.26	0.33
+Device2_Cmd4	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.51	0.98	1	0.51	0.98		9			悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.338	0.392	1	0.338	0.392
+Device3_Cmd4	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.11	0.45	1	0.11	0.45		8			友善	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.423	0.463	1	0.423	0.463
+Device4_Cmd4	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0.61	0.88	1	0.61	0.88		7			後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.473	0.547	1	0.473	0.547
+Device5_Cmd4	/cmd-list	0	/disable-effect	12	/play-video	women.mp4	0.61	0.99	1	0.61	0.99		3			放鬆	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.561	0.586	1	0.561	0.586
+Device6_Cmd4	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.11	0.45	1	0.11	0.45		8			開心	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.627	0.658	1	0.627	0.658
+Device1_Cmd5	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0.36	0.41	1	0.36	0.41		5			狂喜	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.658	0.696	1	0.658	0.696
+Device2_Cmd5	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0.61	0.88	1	0.61	0.88		7			狂喜2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.689	0.719	1	0.689	0.719
+Device3_Cmd5	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0.43	0.5	1	0.43	0.5		6			不可置信	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.724	0.78	1	0.724	0.78
+Device4_Cmd5	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0.61	0.88	1	0.61	0.88		7			搞砸	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.802	0.857	1	0.802	0.857
+Device5_Cmd5	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0	0.17	1	0	0.17		4			非常悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.87	0.913	1	0.87	0.913
+Device6_Cmd5	/cmd-list	0	/disable-effect	12	/play-video	women.mp4	0.61	0.99	1	0.61	0.99		3			不屑	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.929	0.972	1	0.929	0.972
+Device1_Cmd6	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.11	0.45	1	0.11	0.45		8			煩躁	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.018	0.085	1	0.018	0.085
+Device2_Cmd6	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.51	0.98	1	0.51	0.98		9			微慍	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.09	0.154	1	0.09	0.154
+Device3_Cmd6	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0.43	0.5	1	0.43	0.5		6			生氣	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.155	0.228	1	0.155	0.228
+Device4_Cmd6	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0.43	0.5	1	0.43	0.5		6			後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.26	0.33	1	0.26	0.33
+Device5_Cmd6	/cmd-list	0	/disable-effect	12	/play-video	women.mp4	0	0.3	1	0	0.3		1			悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.338	0.392	1	0.338	0.392
+Device6_Cmd6	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.51	0.98	1	0.51	0.98		9			友善	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.423	0.463	1	0.423	0.463
+Device1_Cmd7	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0	0.17	1	0	0.17		4			後悔	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.473	0.547	1	0.473	0.547
+Device2_Cmd7	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.51	0.98	1	0.51	0.98		9			放鬆	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.561	0.586	1	0.561	0.586
+Device3_Cmd7	/cmd-list	0	/disable-effect	12	/play-video	women.mp4	0.31	0.57	1	0.31	0.57		2			開心	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.627	0.658	1	0.627	0.658
+Device4_Cmd7	/cmd-list	0	/disable-effect	12	/play-video	army.mp4	0.11	0.45	1	0.11	0.45		8			狂喜	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.658	0.696	1	0.658	0.696
+Device5_Cmd7	/cmd-list	0	/disable-effect	12	/play-video	women.mp4	0.61	0.99	1	0.61	0.99		3			狂喜2	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.689	0.719	1	0.689	0.719
+Device6_Cmd7	/cmd-list	0	/disable-effect	12	/play-video	cram.mp4	0	0.17	1	0	0.17		4			不可置信	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.724	0.78	1	0.724	0.78
+Device1_Cmd8	/cmd-list	0	/disable-effect	12	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					搞砸	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.802	0.857	1	0.802	0.857
+Device2_Cmd8	/cmd-list	0	/disable-effect	12	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					非常悲傷	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.87	0.913	1	0.87	0.913
+Device3_Cmd8	/cmd-list	0	/disable-effect	12	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					不屑	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.929	0.972	1	0.929	0.972
+Device4_Cmd8	/cmd-list	0	/disable-effect	12	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					煩躁	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.018	0.085	1	0.018	0.085
+Device5_Cmd8	/cmd-list	0	/disable-effect	12	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					微慍	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.09	0.154	1	0.09	0.154
+Device6_Cmd8	/cmd-list	0	/disable-effect	12	/play-video	tvnoise-low.mp4	-1	-1	1	-1	-1					生氣	/cmd-list	0	/trigger-effect	11	2	1	0	7	0	13	0.5	0.5	12	0	1	/play-video	VarEmoFace.mp4	0.155	0.228	1	0.155	0.228
 Device1_Cmd9	/disable-effect	-1														Device1_Cmd9	/disable-effect	-1																				
 Device2_Cmd9	/disable-effect	-1														Device2_Cmd9	/disable-effect	-1																				
 Device3_Cmd9	/disable-effect	-1														Device3_Cmd9	/disable-effect	-1																				
